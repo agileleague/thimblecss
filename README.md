@@ -1,5 +1,4 @@
 The Nimble Thimble
-
 ==============
 
   A lightweight flexbox css framework<br />
@@ -9,15 +8,17 @@ The Nimble Thimble
   Version: 2.0
 
 
-Set up Thimble
 
+
+Set up Thimble
 ==============
   Just add the thimble.css to your header and check out the demo page:<br />
   http://thimblecss.com/demo/
 
 
-Libraries and Resources used 
 
+
+Libraries and Resources used 
 ==============
 
   Eric Meyer's CSS Reset<br />
