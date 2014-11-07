@@ -197,7 +197,7 @@ a:active, a:hover {color:#f15a3b;} /* SET */
     right:0;
   }
   
-  .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve, .fifths, .half, .third {
+  .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve, .fifths, .half, .third, .noflex {
     -webkit-box-flex: none;
     -webkit-flex: none;
     -moz-box-flex: none;
