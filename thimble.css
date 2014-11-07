@@ -257,7 +257,7 @@ a:active, a:hover {color:#f15a3b;} /* SET */
     -webkit-box-align: baseline;-webkit-align-items: baseline;-moz-box-align: baseline;-ms-flex-align: baseline; align-items: baseline;
   }
   .align-stretch {
-  `-webkit-box-align: stretch;-webkit-align-items: stretch;-moz-box-align: stretch;-ms-flex-align: stretch; align-items: stretch;
+    -webkit-box-align: stretch;-webkit-align-items: stretch;-moz-box-align: stretch;-ms-flex-align: stretch; align-items: stretch;
   }
     .align-stretch .cell {
       background-clip: content-box;
