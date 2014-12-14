@@ -329,6 +329,9 @@ a:active, a:hover {color:#f15a3b;} /* SET */
   h4.vw {font-size:4vw;}
   h5.vw {font-size:3.5vw;}
 
+  .small-text-center {text-align:center;}
+  .small-text-left {text-align:left;}
+  .small-text-right {text-align:right;}
 
   .hide-small {display:none;}
   .hide-large {display:block;}
