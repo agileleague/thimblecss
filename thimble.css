@@ -192,6 +192,13 @@ a:active, a:hover {color:#f15a3b;} /* SET */
     padding:0 .5rem;
   }
   
+  .cell.fit {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+  }
+  
   .cell:last-of-type {
     position:relative;
     right:0;
