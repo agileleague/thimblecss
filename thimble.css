@@ -226,6 +226,18 @@ a:active, a:hover {color:#f15a3b;} /* SET */
   .one {width:calc(100%/12);}
   .fifths {width:20%;}
 
+  .offset-1 {margin-left:calc(100%/12);}
+  .offset-2 {margin-left:calc(100%/12 * 2);}
+  .offset-3 {margin-left:25%;}
+  .offset-4 {margin-left:calc(100%/12 * 4);}
+  .offset-5 {margin-left:calc(100%/12 * 5);}
+  .offset-6 {margin-left:50%;}
+  .offset-7 {margin-left:calc(100%/12 * 7);}
+  .offset-8 {margin-left:calc(100%/12 * 8);}
+  .offset-9 {margin-left:width:75%;}
+  .offset-10 {margin-left:calc(100%/12 * 10);}
+  .offset-11 {margin-left:calc(100%/12 * 11);}
+
   /*rows & clears*/
   .no-flexboxlegacy .row:before,.no-flexboxlegacy .row:after,.no-flexbox .row:before,.no-flexbox .row:after,.clear:before,.clear:after {content:'';display:table}
   .no-flexbox .row:after,.clear:after, .no-flexboxlegacy .row:after {clear:both}
