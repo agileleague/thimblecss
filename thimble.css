@@ -146,6 +146,8 @@ a:active, a:hover {color:#f15a3b;} /* SET */
     margin:0 -.5rem;
   }
   
+  .row.collapse, .row.collapse.cell, .row.collapse .row {padding: 0 0;}
+  
   .nowrap {
     -webkit-flex-wrap:nowrap;
     -ms-flex-wrap: nowrap;
@@ -234,7 +236,7 @@ a:active, a:hover {color:#f15a3b;} /* SET */
   .offset-6 {margin-left:50%;}
   .offset-7 {margin-left:calc(100%/12 * 7);}
   .offset-8 {margin-left:calc(100%/12 * 8);}
-  .offset-9 {margin-left:width:75%;}
+  .offset-9 {margin-left:75%;}
   .offset-10 {margin-left:calc(100%/12 * 10);}
   .offset-11 {margin-left:calc(100%/12 * 11);}
 
