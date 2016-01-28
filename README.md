@@ -12,7 +12,7 @@ Learn more at [ThimbleCSS](http://thimblecss.com/)
 
 
 
-##Set up Thimble
+###Set up Thimble
 
 Just add the thimble.css to your header:<br />
   
@@ -32,10 +32,15 @@ Or if you're using SASS:
 For Complete docs, please visit [ThimbleCSS Docs](http://thimblecss.com/docs)
 
 
-## Featuring
+### Featuring
 * Unlimited columns
 * Easy content re-ordering
 * Center anything
 * Stretch columns
 * Responsive header sizes
 * SASS compatible
+
+
+### License
+
+Licensed under the [MIT LIcense](http://opensource.org/licenses/MIT)
