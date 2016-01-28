@@ -1,9 +1,9 @@
-The Nimble Thimble
+ThimbleCSS
 ==============
 
 A Nimble CSS Framework  
 built with flexbox  
-<small>Powered by the Agile League</small>  
+Powered by the [Agile League](http://agileleague.com/)
 http://agileleague.com  
 
 v1.0.0-beta  
