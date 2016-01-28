@@ -3,8 +3,7 @@ ThimbleCSS
 
 A Nimble CSS Framework  
 built with flexbox  
-Powered by the [Agile League](http://agileleague.com/)
-http://agileleague.com  
+Powered by [the Agile League](http://agileleague.com/)
 
 v1.0.0-beta  
 
@@ -21,7 +20,6 @@ Just add the thimble.css to your header:<br />
 <link rel="stylesheet" href="thimble.min.css" >
 ```
   
-
 Or if you're using SASS:
 ```
 // ThimbleCSS
@@ -32,6 +30,7 @@ Or if you're using SASS:
 For Complete docs, please visit [ThimbleCSS Docs](http://thimblecss.com/docs)
 
 
+
 ### Featuring
 * Unlimited columns
 * Easy content re-ordering
@@ -39,6 +38,7 @@ For Complete docs, please visit [ThimbleCSS Docs](http://thimblecss.com/docs)
 * Stretch columns
 * Responsive header sizes
 * SASS compatible
+
 
 
 ### License
