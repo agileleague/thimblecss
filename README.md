@@ -1,34 +1,41 @@
 The Nimble Thimble
 ==============
 
-  A lightweight flexbox css framework<br />
-  By the Agile League<br />
-  http://agileleague.com
+A Nimble CSS Framework  
+built with flexbox  
+<small>Powered by the Agile League</small>  
+http://agileleague.com  
 
-  Version: 2.0
+v1.0.0-beta  
 
-
-
-
-Set up Thimble
-==============
-  Just add the thimble.css to your header and check out the demo page:<br />
-  http://thimblecss.com/demo/
+Learn more at [ThimbleCSS](http://thimblecss.com/)
 
 
 
+##Set up Thimble
 
-Libraries and Resources used 
-==============
+Just add the thimble.css to your header:<br />
+  
+```
+<!-- ThimbleCSS -->
+<link rel="stylesheet" href="thimble.min.css" >
+```
+  
 
-  Eric Meyer's CSS Reset<br />
-  http://meyerweb.com/eric/tools/css/reset/<br />
-  v2.0 | 20110126<br />
-  License: none (public domain)
+Or if you're using SASS:
+```
+// ThimbleCSS
+@import 'thimble-overrides.scss';
+@import 'thimble.scss';
+```
 
-  Modernizr 2.8.3 (Custom Build) | MIT & BSD
+For Complete docs, please visit [ThimbleCSS Docs](http://thimblecss.com/docs)
 
-  html5shiv<br />
-  MIT/GPL2 Licensed<br />
-  https://github.com/aFarkas
 
+## Featuring
+* Unlimited columns
+* Easy content re-ordering
+* Center anything
+* Stretch columns
+* Responsive header sizes
+* SASS compatible
