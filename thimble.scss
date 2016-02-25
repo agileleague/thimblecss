@@ -81,7 +81,7 @@ p {
 
 em, i {
   font-style:italic;
-  line-height:inherit; 
+  line-height:inherit;
 }
 
 .uppercase {
@@ -133,7 +133,7 @@ sub, .sub {
 h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
   font-weight:normal;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;  
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-size: inherit;
   &.super-header {
@@ -157,8 +157,8 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
 .h3.vw {font-size:2.5vw;}
 .h4.vw {font-size:2vw;}
 .h5.vw {font-size:1.5vw;}
-  
-  
+
+
 // Lists
 ul, ol, dl {
   list-style-position:outside;
@@ -336,16 +336,16 @@ ol {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  
+
   -webkit-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  
+
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap;  
+          flex-wrap: wrap;
   &.collapse {
     > .cell {
       padding-left:0;
@@ -388,16 +388,23 @@ ol {
 
 // Row Direction
 .reverse {
-  -webkit-flex-direction:row-reverse;
-  flex-direction: row-reverse;
+  -webkit-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 .column {
-  -webkit-flex-direction:column;
-  flex-direction: column;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+
 }
 .column-reverse {
-  -webkit-flex-direction:column-reverse;
-  flex-direction: column-reverse;
+  -webkit-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
 }
 
 
@@ -482,15 +489,15 @@ ol {
 
 // Alignment
 .align-top {
-  -webkit-box-align: start;-webkit-align-items: flex-start;-moz-box-align: start;-ms-flex-align: start;align-items: flex-start;   
+  -webkit-box-align: start;-webkit-align-items: flex-start;-moz-box-align: start;-ms-flex-align: start;align-items: flex-start;
   -webkit-align-self: flex-start;-ms-flex-item-align: start;align-self: flex-start;
 }
 .align-bottom {
-  -webkit-box-align: end;-webkit-align-items: flex-end;-moz-box-align: end;-ms-flex-align: end;align-items: flex-end;   
+  -webkit-box-align: end;-webkit-align-items: flex-end;-moz-box-align: end;-ms-flex-align: end;align-items: flex-end;
   -webkit-align-self: flex-end;-ms-flex-item-align: end;align-self: flex-end;
-}    
+}
 .align-center {
-  -webkit-box-align: center;-webkit-align-items: center;-moz-box-align: center;-ms-flex-align: center;align-items: center;    
+  -webkit-box-align: center;-webkit-align-items: center;-moz-box-align: center;-ms-flex-align: center;align-items: center;
   -webkit-align-self: center;-ms-flex-item-align: center;align-self: center;
 }
 .align-baseline {
@@ -559,7 +566,7 @@ ol {
   box-shadow:$solid-shadow;
 }
 
-  
+
 // MEDIA QUERIES
 /* smaller than 768px */
 @media #{$small-down} {
@@ -599,7 +606,7 @@ ol {
               flex: 0 0 auto;
     }
   }
-  
+
   .hold > .one, .hold > .two, .hold > .three, .hold > .four, .hold > .five, .hold > .six, .hold > .seven, .hold > .eight, .hold > .nine, .hold > .ten, .hold > .eleven, .hold > .twelve, .hold > .fifths, .hold > .half, .hold > .third {
     -webkit-box-flex: none;
     -webkit-flex: none;
@@ -607,7 +614,7 @@ ol {
     -ms-flex: none;
     flex: none;
   }
-  
+
   .small-twelve {width:100%;}
   .small-eleven {width:calc(100%/12 * 11);}
   .small-ten {width:calc(100%/12 * 10);}
@@ -629,7 +636,7 @@ ol {
     flex: none;
   }
 
-  
+
   // Order
   .o1-small {-webkit-box-ordinal-group: 1;-moz-box-ordinal-group: 1;-ms-flex-order: 1;-webkit-order: 1;order: 1;}
   .o2-small {-webkit-box-ordinal-group: 2;-moz-box-ordinal-group: 2;-ms-flex-order: 2;-webkit-order: 2;order: 2;}
@@ -643,7 +650,7 @@ ol {
   .o10-small {-webkit-box-ordinal-group: 10;-moz-box-ordinal-group: 10;-ms-flex-order: 10;-webkit-order: 10;order: 10;}
   .o11-small {-webkit-box-ordinal-group: 11;-moz-box-ordinal-group: 11;-ms-flex-order: 11;-webkit-order: 11;order: 11;}
   .o12-small {-webkit-box-ordinal-group: 12;-moz-box-ordinal-group: 12;-ms-flex-order: 12;-webkit-order: 12;order: 12;}
-  
+
   .o1-large, .o2-large, .o3-large, .o4-large, .o5-large, .o6-large, .o7-large, .o8-large, .o9-large, .o10-large, .o11-large, .o12-large {
     -webkit-box-ordinal-group: 0;
     -moz-box-ordinal-group: 0;

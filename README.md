@@ -5,7 +5,7 @@ A Nimble CSS Framework
 built with flexbox  
 Powered by [the Agile League](http://agileleague.com/)
 
-v1.0.0-beta  
+v1.0.1-beta  
 
 Learn more at [ThimbleCSS](http://thimblecss.com/)
 
@@ -14,12 +14,12 @@ Learn more at [ThimbleCSS](http://thimblecss.com/)
 ###Set up Thimble
 
 Just add the thimble.css to your header:<br />
-  
+
 ```
 <!-- ThimbleCSS -->
 <link rel="stylesheet" href="thimble.min.css" >
 ```
-  
+
 Or if you're using SASS:
 ```
 // ThimbleCSS
