@@ -45,6 +45,10 @@ $large-down: "only screen and (max-width: #{75em})"; // > 1200px
 $medium-up: "only screen and (min-width: #{64.063em})"; // < 1025px
 $medium-down: "only screen and (max-width: #{64em})"; // > 1024px
 
+$medium-only: "only screen
+                and (max-width: #{64em})
+                and (min-width: #{48.063em})";
+
 $small-up: "only screen and (min-width: #{48.063em})"; // < 769px
 $small-down: "only screen and (max-width: #{48em})"; // > 768px
 
@@ -82,17 +86,17 @@ $tiny-down: "only screen and (max-width: #{30rem})"; // > 480px
 
 // CSS Columns Mixin
 @mixin columns($count, $gap) {
-  -webkit-column-count:$count; 
+  -webkit-column-count:$count;
   -moz-column-count:$count;
   column-count:$count;
   -webkit-column-gap:$gap;
-  -moz-column-gap:$gap; 
-  column-gap:$gap; 
+  -moz-column-gap:$gap;
+  column-gap:$gap;
   -webkit-column-break-inside:avoid;
   -moz-column-break-inside:avoid;
   -o-column-break-inside:avoid;
   -ms-column-break-inside:avoid;
-  column-break-inside:avoid; 
+  column-break-inside:avoid;
 }
 
 
