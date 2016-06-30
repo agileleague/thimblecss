@@ -4,12 +4,13 @@
 
 
 // The Nimble Base
-$font-family:sans-serif;
+$font-family: sans-serif;
+$header-font: sans-serif;
 $font-color:#616161;
 
 $blue: #2266a7;
-$yellow:#e2d21f;
-$red:#f15a3b;
+$yellow: #e2d21f;
+$red: #f15a3b;
 $green: #57a290;
 
 
@@ -65,7 +66,6 @@ $tiny-down: "only screen and (max-width: #{30rem})"; // > 480px
   &::-webkit-scrollbar {background: $track; width:$width;}
   &::-webkit-scrollbar-thumb {background: $bar; border-radius:$radius}
   &::-webkit-scrollbar-corner {background: $track;}
-
   scrollbar-base-color: $bar;
   scrollbar-3dlight-color: $bar;
   scrollbar-highlight-color: $bar;
@@ -78,11 +78,9 @@ $tiny-down: "only screen and (max-width: #{30rem})"; // > 480px
 
 // Transform Mixin
 @mixin transform($trans) {
-  -ms-transform: $trans;
   -webkit-transform: $trans;
   transform: $trans;
 }
-
 
 // CSS Columns Mixin
 @mixin columns($count, $gap) {
@@ -94,24 +92,19 @@ $tiny-down: "only screen and (max-width: #{30rem})"; // > 480px
   column-gap:$gap;
   -webkit-column-break-inside:avoid;
   -moz-column-break-inside:avoid;
-  -o-column-break-inside:avoid;
   -ms-column-break-inside:avoid;
   column-break-inside:avoid;
 }
-
 
 // Keyframe Mixins
 @mixin keyframes($animationName) {
   @-webkit-keyframes #{$animationName} {@content;}
   @-moz-keyframes #{$animationName} {@content;}
-  @-o-keyframes #{$animationName} {@content;}
   @keyframes #{$animationName} {@content;}
 };
-
 @mixin call-keyframes($ani...) {
   -webkit-animation: $ani;
   -moz-animation: $ani;
   -ms-animation: $ani;
-  -o-animation: $ani;
   animation: $ani;
 };
