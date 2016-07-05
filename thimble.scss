@@ -23,13 +23,13 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   margin:0;
 }
 body {
   margin:0;
   line-height:1.6;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   font-family:$font-family;
   color:$font-color;
 }
@@ -41,9 +41,7 @@ hr {
 }
 .float-left {float:left;}
 .float-right {float:right;}
-.hide, .hide-large {
-  display:none!important;
-}
+.hide, .hide-large {display:none!important;}
 
 // Links
 a {
@@ -102,8 +100,6 @@ sub, .sub {bottom:-.5em;}
 h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
   font-family: $header-font;
   font-weight:normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-size: inherit;
   &.super-header {
@@ -329,9 +325,9 @@ ol {
   -webkit-justify-content: flex-start;
           justify-content: flex-start;
 }
-.justify-end {-webkit-justify-content:flex-end;-moz-box-pack:end;ms-flex-pack:end;justify-content:flex-end;}
-.justify-center {-webkit-justify-content:center;-moz-box-pack:center;ms-flex-pack:center;justify-content:center;}
-.justify-space {-webkit-justify-content:space-between;-moz-box-pack:justify;ms-flex-pack:justify;justify-content:space-between;}
+.justify-end {-webkit-justify-content:flex-end;-moz-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;}
+.justify-center {-webkit-justify-content:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center;}
+.justify-space {-webkit-justify-content:space-between;-moz-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;}
 .justify-around {-webkit-justify-content:space-around;justify-content:space-around;}
 
 // Row Direction
@@ -414,10 +410,10 @@ ol {
 .offset-10 {margin-left:calc(100%/12 * 10);}
 .offset-11 {margin-left:calc(100%/12 * 11);}
 
-// Rows & clears
-.no-flexboxlegacy .row:before,.no-flexboxlegacy .row:after,.no-flexbox .row:before,.no-flexbox .row:after,.clear:before,.clear:after {content:'';display:table}
-.no-flexbox .row:after,.clear:after, .no-flexboxlegacy .row:after {clear:both}
-.no-flexbox .row, .no-flexboxlegacy .row, .clear {zoom:1}
+// clears
+.clear:before,.clear:after {content:'';display:table}
+.clear:after {clear:both}
+.clear {zoom:1}
 
 // Ordering
 .o1, .o1-large {-ms-flex-order: 1;-webkit-order: 1;order: 1;}

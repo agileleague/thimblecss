@@ -1,6 +1,11 @@
 Change Log
 ==============
 
+## v1.0.4-beta
+- remove modernizr tags
+- fix small validation errors in .css file
+- move css into own folder
+
 ## v1.0.3.5-beta
 - Fix multiline css media query
 
