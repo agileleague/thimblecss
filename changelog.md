@@ -1,6 +1,11 @@
 Change Log
 ==============
 
+## v1.1-beta
+- move scss to own file
+- pull out mixins
+- add style-guide sheet
+
 ## v1.0.4-beta
 - remove modernizr tags
 - fix small validation errors in .css file

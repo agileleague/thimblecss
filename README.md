@@ -5,7 +5,7 @@ A Nimble CSS Framework
 built with flexbox  
 Powered by [the Agile League](http://agileleague.com/)
 
-v1.0.4-beta  
+v1.1-beta  
 
 Learn more at [ThimbleCSS](http://thimblecss.com/)
 

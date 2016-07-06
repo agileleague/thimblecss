@@ -1,0 +1,48 @@
+// Mixins
+
+// Scroll Bar Mixin
+@mixin scrollbar($track, $bar, $width, $radius) {
+  &::-webkit-scrollbar {background: $track; width:$width;}
+  &::-webkit-scrollbar-thumb {background: $bar; border-radius:$radius}
+  &::-webkit-scrollbar-corner {background: $track;}
+  scrollbar-base-color: $bar;
+  scrollbar-3dlight-color: $bar;
+  scrollbar-highlight-color: $bar;
+  scrollbar-track-color: $track;
+  scrollbar-arrow-color: $track;
+  scrollbar-shadow-color: $bar;
+  scrollbar-dark-shadow-color: $bar;
+}
+
+// Transform Mixin
+@mixin transform($trans) {
+  -webkit-transform: $trans;
+  transform: $trans;
+}
+
+// CSS Columns Mixin
+@mixin columns($count, $gap) {
+  -webkit-column-count:$count;
+  -moz-column-count:$count;
+  column-count:$count;
+  -webkit-column-gap:$gap;
+  -moz-column-gap:$gap;
+  column-gap:$gap;
+  -webkit-column-break-inside:avoid;
+  -moz-column-break-inside:avoid;
+  -ms-column-break-inside:avoid;
+  column-break-inside:avoid;
+}
+
+// Keyframe Mixins
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {@content;}
+  @-moz-keyframes #{$animationName} {@content;}
+  @keyframes #{$animationName} {@content;}
+};
+@mixin call-keyframes($ani...) {
+  -webkit-animation: $ani;
+  -moz-animation: $ani;
+  -ms-animation: $ani;
+  animation: $ani;
+};

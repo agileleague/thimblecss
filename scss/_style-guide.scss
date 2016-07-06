@@ -1,0 +1,165 @@
+
+$large-splash-image:"images/quilt.jpg"; // Set to splash url OR false
+
+// Colors. Set to FALSE if not in use
+
+$color-1:  $primary-color;
+$color-2:  lighten($primary-color, 5%);
+$color-3:  lighten($primary-color, 10%);
+$color-4:  $secondary-color;
+$color-5:  lighten($secondary-color, 5%);
+$color-6:  $yellow;
+$color-7:  adjust-hue($yellow, -6%);
+$color-8:  $red;
+$color-9:  false;
+$color-10: false;
+$color-11: false;
+$color-12: false;
+
+$colors: $color-1, $color-2, $color-3, $color-4, $color-5, $color-6, $color-7, $color-8, $color-9, $color-10, $color-11, $color-12;
+
+
+.section-header {
+  margin-bottom:2rem;
+}
+
+// intro
+.intro {
+  width:100%;
+  height:340px;
+  background-color:desaturate($primary-color, 20%);
+  position:relative;
+  @if $large-splash-image != null {
+    &:before {
+      background-image:url('#{$large-splash-image}');
+      background-size:cover;
+      background-position:center center;
+      position:absolute;
+      content:"";
+      display:block;
+      top:0;
+      right:0;
+      bottom:0;
+      left:0;
+      z-index:2;
+      opacity:.7;
+      filter: grayscale(50%);
+      -webkit-filter: grayscale(50%);
+    }
+  }
+
+  .main-logo {
+    background-image:url('#{$icon-path-light}');
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center center;
+    width:150px;
+    height:150px;
+    -webkit-filter: drop-shadow(0px 0px 12px #000) drop-shadow(0px 0px 6px rgba(0, 0, 0, .6));
+    filter: drop-shadow(0px 0px 12px #000) drop-shadow(0px 0px 6px rgba(0, 0, 0, .6));
+    position:relative;
+    z-index:3
+  }
+}
+
+// Color row
+.colors {
+  .cell {
+    height:100px;
+    display:none;
+    color:#fff;
+    text-transform:uppercase;
+    font-size:.75rem;
+    text-align:center;
+    position:relative;
+    @media #{$small-down} {
+      height:auto;
+    }
+    &:after {
+      display:block;
+      position:absolute;
+      width:100%;
+      bottom:10px;
+      left:0;
+      font-weight:bold;
+      @media #{$small-down} {
+        position:relative;
+        bottom:auto;
+        line-height:3;
+      }
+    }
+  }
+  @for $i from 1 through length($colors) {
+    @if nth($colors, $i) != false {
+      .color-#{$i} {
+        display:block;
+        background-color: nth($colors, $i);
+        &:after {
+          content: "#{nth($colors, $i)}";
+        }
+      }
+    }
+  }
+}
+.primary-colors {
+  padding:3rem 0 4rem;
+  .color {
+    height:100px;
+    width:100px;
+  }
+  .color-row {
+    margin-bottom:.75rem;
+  }
+  span{
+    font-size:.75rem;
+    display:block;
+    color:$subfont-color;
+    line-height:1.2;
+    strong {
+      display:inline-block;
+      width:42px;
+      font-weight:normal;
+    }
+    &:after {display:inline-block;}
+    &:last-of-type {padding-bottom:.5rem;}
+  }
+  .color-1 {
+    .color {background-color:$primary-color;}
+    .hex:after {content: "#{$primary-color}";}
+    .rgb:after {content: "#{red($primary-color)}, #{green($primary-color)}, #{blue($primary-color)}";}
+    .hsl:after {content: "#{hue($primary-color)}, #{saturation($primary-color)}, #{lightness($primary-color)}";}
+  }
+  .color-2 {
+    .color{background-color:$secondary-color;}
+    .hex:after {content: "#{$secondary-color}";}
+    .rgb:after {content: "#{red($secondary-color)}, #{green($secondary-color)}, #{blue($secondary-color)}";}
+    .hsl:after {content: "#{hue($secondary-color)}, #{saturation($secondary-color)}, #{lightness($secondary-color)}";}
+  }
+  .color-3 {
+    .color{background-color:$tertiary-color;}
+    .hex:after {content: "#{$tertiary-color}";}
+    .rgb:after {content: "#{red($tertiary-color)}, #{green($tertiary-color)}, #{blue($tertiary-color)}";}
+    .hsl:after {content: "#{hue($tertiary-color)}, #{saturation($tertiary-color)}, #{lightness($tertiary-color)}";}
+  }
+  .color-4 {
+    .color{background-color:$font-color;}
+    .hex:after {content: "#{$font-color}";}
+    .rgb:after {content: "#{red($font-color)}, #{green($font-color)}, #{blue($font-color)}";}
+    .hsl:after {content: "#{hue($font-color)}, #{saturation($font-color)}, #{lightness($font-color)}";}
+  }
+}
+
+// Typography
+.typography {
+  padding:3rem 0 4rem;
+}
+.header-cell {
+  span {
+    opacity:.25;
+    letter-spacing:-1px;
+    display:inline-block;
+    width:100px;
+    text-align:right;
+    margin-right:16px;
+  }
+}
