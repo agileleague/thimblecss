@@ -840,7 +840,7 @@ ol {
     -webkit-order: 0;
     order: 0; } }
 .style-guide {
-  background-color: #fafafa; }
+  background-color: #f7f7f7; }
 
 .section-header {
   margin-bottom: 2rem; }
@@ -851,34 +851,80 @@ ol {
 .intro {
   width: 100%;
   height: 340px;
-  background-color: #366693;
-  position: relative; }
-  .intro:before {
-    background-image: url("images/quilt.jpg");
-    background-size: cover;
-    background-position: center center;
-    position: absolute;
-    content: "";
-    display: block;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
-    opacity: .7;
-    filter: grayscale(50%);
-    -webkit-filter: grayscale(50%); }
+  position: relative;
+  background-color: #6e7e85;
+  color: #fff;
+  text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25); }
+  .intro .sub-header {
+    color: inherit;
+    opacity: .6; }
+    .intro .sub-header:after {
+      display: inline-block;
+      content: "ThimbleCSS"; }
+  .intro .cell {
+    z-index: 3; }
+  .intro .main-logo-container {
+    display: none; }
   .intro .main-logo {
-    background-image: url("images/thimble-logo-white.svg");
+    background-image: url("false");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
     width: 150px;
     height: 150px;
-    -webkit-filter: drop-shadow(0px 0px 12px #000) drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.6));
-    filter: drop-shadow(0px 0px 12px #000) drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.6));
-    position: relative;
-    z-index: 3; }
+    -webkit-filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.5)); }
+
+.logo-container {
+  background-color: #fff;
+  padding: 3rem 0 4rem;
+  display: none; }
+
+.logo-container {
+  display: block !important; }
+
+.icon-logo, .icon-block, .logotype, .main-logo {
+  display: none; }
+
+.logo-block {
+  width: 100%;
+  height: 260px;
+  max-width: 540px;
+  border: solid 40px #57a290;
+  background-color: #57a290;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: none; }
+
+.icon-logo {
+  display: flex; }
+
+.icon-block {
+  float: left;
+  width: 180px;
+  height: 180px;
+  border: solid 40px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+.icon-normal {
+  display: block;
+  background-image: url("images/thimble-logo.svg");
+  background-color: #f4f4f4;
+  border-color: #f4f4f4; }
+
+.logotype-block {
+  width: 100%;
+  height: 180px;
+  max-width: 540px;
+  border: solid 40px #57a290;
+  background-color: #57a290;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: none; }
 
 .colors {
   margin-bottom: 3rem; }
@@ -905,6 +951,12 @@ ol {
           position: relative;
           bottom: auto;
           line-height: 3; } }
+  .colors.colors-compressed {
+    margin-bottom: 0; }
+    .colors.colors-compressed .cell {
+      height: 20px; }
+      .colors.colors-compressed .cell:after {
+        display: none; }
   .colors .color-1 {
     display: block;
     background-color: #2266a7; }

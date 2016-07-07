@@ -1,5 +1,5 @@
 
-$large-splash-image:"images/quilt.jpg"; // Set to splash url OR false
+$large-splash-image: false; // Set to splash url OR FALSE
 
 // Colors. Set to FALSE if not in use
 
@@ -18,8 +18,12 @@ $color-12: false;
 
 $colors: $color-1, $color-2, $color-3, $color-4, $color-5, $color-6, $color-7, $color-8, $color-9, $color-10, $color-11, $color-12;
 
+$identity-marks: $logo-path, $logo-path-light, $logo-icon-path, $logo-icon-path-light, $logotype-path, $logotype-path-light;
 
-.style-guide {background-color:#fafafa;}
+$logo-back: $secondary-color;
+$style-body-background: #f7f7f7;
+
+.style-guide {background-color:$style-body-background;}
 .section-header {margin-bottom:2rem;}
 .section-row {margin:3rem 0;}
 
@@ -27,9 +31,21 @@ $colors: $color-1, $color-2, $color-3, $color-4, $color-5, $color-6, $color-7, $
 .intro {
   width:100%;
   height:340px;
-  background-color:desaturate($primary-color, 20%);
   position:relative;
-  @if $large-splash-image != null {
+  background-color:$gray;
+  color:#fff;
+  text-shadow:0px 0px 12px rgba(0,0,0,.25);
+  .sub-header {
+    color:inherit;
+    opacity:.6;
+    &:after {
+      display: inline-block;
+      content: "#{$project-name}";
+    }
+  }
+  .cell {z-index:3;}
+  @if $large-splash-image != false {
+    background-color:desaturate($primary-color, 20%);
     &:before {
       background-image:url('#{$large-splash-image}');
       background-size:cover;
@@ -48,19 +64,144 @@ $colors: $color-1, $color-2, $color-3, $color-4, $color-5, $color-6, $color-7, $
     }
   }
 
+  .main-logo-container {display:none;}
+  @if $logo-icon-path-light != false {
+    .main-logo-container {display:block;}
+  }
+
   .main-logo {
-    background-image:url('#{$icon-path-light}');
+    background-image:url('#{$logo-icon-path-light}');
     background-size:contain;
     background-repeat:no-repeat;
     background-position:center center;
     width:150px;
     height:150px;
-    -webkit-filter: drop-shadow(0px 0px 12px #000) drop-shadow(0px 0px 6px rgba(0, 0, 0, .6));
-    filter: drop-shadow(0px 0px 12px #000) drop-shadow(0px 0px 6px rgba(0, 0, 0, .6));
-    position:relative;
-    z-index:3
+    -webkit-filter: drop-shadow(0px 0px 12px rgba(0,0,0,.5));
+    filter: drop-shadow(0px 0px 12px rgba(0,0,0,.5));
   }
 }
+
+// LOGOS
+.logo-container {
+  background-color:#fff;
+  padding:3rem 0 4rem;
+  display:none;
+}
+
+@for $i from 1 through length($identity-marks) {
+  @if nth($identity-marks, $i) != false {
+    .logo-container {
+      display: block!important;
+    }
+  }
+}
+
+.icon-logo, .icon-block, .logotype, .main-logo {
+  display:none;
+}
+
+@if $logo-path != false or $logo-path-light != false {
+  .main-logo {
+    display:flex;
+  }
+}
+.logo-block {
+  width:100%;
+  height: 260px;
+  max-width:540px;
+  border:solid 40px $logo-back;
+  background-color:$logo-back;
+  background-size:contain;
+  background-position:center center;
+  background-repeat:no-repeat;
+  display:none;
+  @if $logo-path != false {
+    &.logo-normal {
+      display:block;
+      background-color:darken($style-body-background,1%);
+      border-color:darken($style-body-background,1%);
+      background-image:url('#{$logo-path}');
+    }
+  }
+  @if $logo-path-light != false {
+    &.logo-color {
+      display:block;
+      background-image:url('#{$logo-path-light}');
+    }
+  }
+
+}
+
+
+@if $logo-icon-path-light != false or $logo-icon-path != false {
+  .icon-logo {
+    display:flex;
+  }
+}
+.icon-block {
+  float:left;
+  width:180px;
+  height:180px;
+  border:solid 40px;
+  background-size:contain;
+  background-position:center center;
+  background-repeat:no-repeat;
+}
+@if $logo-icon-path-light != false {
+  .icon-inverse, .icon-color {
+    display:block;
+    background-image:url('#{$logo-icon-path-light}');
+  }
+  .icon-inverse {
+    background-color:$gray;
+    border-color:$gray;
+  }
+  .icon-color {
+    background-color:$logo-back;
+    border-color:$logo-back;
+  }
+}
+@if $logo-icon-path != false {
+  .icon-normal {
+    display:block;
+    background-image:url('#{$logo-icon-path}');
+    background-color:darken($style-body-background,1%);
+    border-color:darken($style-body-background,1%);
+  }
+}
+
+@if $logotype-path != false or $logotype-path-light != false {
+  .logotype {
+    display:flex;
+  }
+}
+.logotype-block {
+  width:100%;
+  height: 180px;
+  max-width:540px;
+  border:solid 40px $logo-back;
+  background-color:$logo-back;
+  background-size:contain;
+  background-position:center center;
+  background-repeat:no-repeat;
+  display:none;
+  @if $logotype-path != false {
+    &.logotype-normal {
+      display:block;
+      background-color:darken($style-body-background,1%);
+      border-color:darken($style-body-background,1%);
+      background-image:url('#{$logotype-path}');
+    }
+  }
+  @if $logotype-path-light != false {
+    &.logotype-color {
+      display:block;
+      background-image:url('#{$logotype-path-light}');
+    }
+  }
+
+}
+
 
 // Color row
 .colors {
@@ -87,6 +228,15 @@ $colors: $color-1, $color-2, $color-3, $color-4, $color-5, $color-6, $color-7, $
         position:relative;
         bottom:auto;
         line-height:3;
+      }
+    }
+  }
+  &.colors-compressed {
+    margin-bottom:0;
+    .cell {
+      height:20px;
+      &:after {
+        display:none;
       }
     }
   }

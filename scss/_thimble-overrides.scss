@@ -1,5 +1,7 @@
 /* ThimbleCSS Overrides */
 
+$project-name: ThimbleCSS;  // Set to project name without quotes
+
 // The Nimble Base
 $body-font: Verdana, Geneva, sans-serif;
 $header-font: "Poppins", sans-serif; // NEED TO RESET BEFORE MERGE TO MASTER
@@ -57,9 +59,12 @@ $tiny-up: "only screen and (max-width: #{30.063em})"; // < 481px
 $tiny-down: "only screen and (max-width: #{30rem})"; // > 480px
 
 // Logos
-// User relative path from your main CSS file
+// User relative path from your main CSS file OR set to FALSE
 $logo-path: false;
 $logo-path-light: false;
 
-$icon-path: "images/thimble-logo.svg";
-$icon-path-light: "images/thimble-logo-white.svg";
+$logo-icon-path: false;
+$logo-icon-path-light: false;
+
+$logotype-path: false;
+$logotype-path-light: false;
