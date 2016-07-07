@@ -839,6 +839,9 @@ ol {
     -ms-flex-order: 0;
     -webkit-order: 0;
     order: 0; } }
+.style-guide {
+  background-color: #fafafa; }
+
 .section-header {
   margin-bottom: 2rem; }
 
@@ -877,69 +880,71 @@ ol {
     position: relative;
     z-index: 3; }
 
-.colors .cell {
-  height: 100px;
-  display: none;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: .75rem;
-  text-align: center;
-  position: relative; }
-  @media only screen and (max-width: 48em) {
-    .colors .cell {
-      height: auto; } }
-  .colors .cell:after {
-    display: block;
-    position: absolute;
-    width: 100%;
-    bottom: 10px;
-    left: 0;
-    font-weight: bold; }
+.colors {
+  margin-bottom: 3rem; }
+  .colors .cell {
+    height: 100px;
+    display: none;
+    color: rgba(255, 255, 255, 0.75);
+    text-transform: uppercase;
+    font-size: .75rem;
+    text-align: center;
+    position: relative; }
     @media only screen and (max-width: 48em) {
-      .colors .cell:after {
-        position: relative;
-        bottom: auto;
-        line-height: 3; } }
-.colors .color-1 {
-  display: block;
-  background-color: #2266a7; }
-  .colors .color-1:after {
-    content: "#2266a7"; }
-.colors .color-2 {
-  display: block;
-  background-color: #2673bc; }
-  .colors .color-2:after {
-    content: "#2673bc"; }
-.colors .color-3 {
-  display: block;
-  background-color: #2b80d1; }
-  .colors .color-3:after {
-    content: "#2b80d1"; }
-.colors .color-4 {
-  display: block;
-  background-color: #57a290; }
-  .colors .color-4:after {
-    content: "#57a290"; }
-.colors .color-5 {
-  display: block;
-  background-color: #66ad9c; }
-  .colors .color-5:after {
-    content: "#66ad9c"; }
-.colors .color-6 {
-  display: block;
-  background-color: #FFE066; }
-  .colors .color-6:after {
-    content: "#FFE066"; }
-.colors .color-7 {
-  display: block;
-  background-color: #ffd166; }
-  .colors .color-7:after {
-    content: "#ffd166"; }
-.colors .color-8 {
-  display: block;
-  background-color: #f15a3b; }
-  .colors .color-8:after {
-    content: "#f15a3b"; }
+      .colors .cell {
+        height: auto; } }
+    .colors .cell:after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      bottom: 10px;
+      left: 0;
+      font-weight: bold; }
+      @media only screen and (max-width: 48em) {
+        .colors .cell:after {
+          position: relative;
+          bottom: auto;
+          line-height: 3; } }
+  .colors .color-1 {
+    display: block;
+    background-color: #2266a7; }
+    .colors .color-1:after {
+      content: "#2266a7"; }
+  .colors .color-2 {
+    display: block;
+    background-color: #2673bc; }
+    .colors .color-2:after {
+      content: "#2673bc"; }
+  .colors .color-3 {
+    display: block;
+    background-color: #2b80d1; }
+    .colors .color-3:after {
+      content: "#2b80d1"; }
+  .colors .color-4 {
+    display: block;
+    background-color: #57a290; }
+    .colors .color-4:after {
+      content: "#57a290"; }
+  .colors .color-5 {
+    display: block;
+    background-color: #66ad9c; }
+    .colors .color-5:after {
+      content: "#66ad9c"; }
+  .colors .color-6 {
+    display: block;
+    background-color: #FFE066; }
+    .colors .color-6:after {
+      content: "#FFE066"; }
+  .colors .color-7 {
+    display: block;
+    background-color: #ffd166; }
+    .colors .color-7:after {
+      content: "#ffd166"; }
+  .colors .color-8 {
+    display: block;
+    background-color: #f15a3b; }
+    .colors .color-8:after {
+      content: "#f15a3b"; }
 
 .primary-colors {
   padding: 3rem 0 4rem; }
