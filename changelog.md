@@ -4,7 +4,8 @@ Change Log
 ## v1.1-beta
 - move scss to own file
 - pull out mixins
-- add style-guide sheet
+- add style-guide html and css
+- add .em class for italics
 
 ## v1.0.4-beta
 - remove modernizr tags

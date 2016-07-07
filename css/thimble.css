@@ -60,7 +60,7 @@ p {
 .text-right {text-align:right;}
 .text-center {text-align:center;}
 .text-block {text-align:justify;}
-em, i {
+em, i, .em {
   font-style:italic;
   line-height:inherit;
 }

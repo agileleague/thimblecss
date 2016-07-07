@@ -1,8 +1,8 @@
 /* ThimbleCSS Overrides */
 
 // The Nimble Base
-$font-family: sans-serif;
-$header-font: sans-serif;
+$body-font: Verdana, Geneva, sans-serif;
+$header-font: "Poppins", sans-serif; // NEED TO RESET BEFORE MERGE TO MASTER
 $font-color:#616161;
 $subfont-color: rgba($font-color,.6);
 

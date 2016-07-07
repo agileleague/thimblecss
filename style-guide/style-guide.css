@@ -41,7 +41,7 @@ html {
 body {
   margin: 0;
   line-height: 1.6;
-  font-family: sans-serif;
+  font-family: Verdana, Geneva, sans-serif;
   color: #616161; }
 
 hr {
@@ -85,7 +85,7 @@ p {
 .text-block {
   text-align: justify; }
 
-em, i {
+em, i, .em {
   font-style: italic;
   line-height: inherit; }
 
@@ -125,7 +125,7 @@ sub, .sub {
   overflow: hidden; }
 
 h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: normal;
   text-rendering: optimizeLegibility;
   font-size: inherit; }
@@ -842,6 +842,9 @@ ol {
 .section-header {
   margin-bottom: 2rem; }
 
+.section-row {
+  margin: 3rem 0; }
+
 .intro {
   width: 100%;
   height: 340px;
@@ -993,12 +996,44 @@ ol {
 
 .typography {
   padding: 3rem 0 4rem; }
+  .typography h3 strong {
+    display: block;
+    opacity: .25;
+    font-size: 70%;
+    line-height: 1.1;
+    font-weight: normal; }
+  .typography .font-1 {
+    font-family: Verdana, Geneva, sans-serif; }
+    .typography .font-1 h3 {
+      font-family: Verdana, Geneva, sans-serif; }
+      .typography .font-1 h3:after {
+        display: inline-block;
+        content: "Verdana, Geneva, sans-serif"; }
+  .typography .font-2 {
+    font-family: "Poppins", sans-serif; }
+    .typography .font-2 h3:after {
+      display: inline-block;
+      content: "Poppins, sans-serif"; }
+
+.font-families .large-a {
+  border-right: solid 1px rgba(0, 0, 0, 0.3); }
+.font-families .super-header {
+  font-size: 8rem; }
+.font-families .h4 {
+  font-size: 1rem; }
+.font-families p:last-of-type {
+  margin-bottom: 0; }
+.font-families .type-specimen {
+  padding-left: 2rem; }
+
+.font-families-use p {
+  min-height: 100px; }
 
 .header-cell span {
   opacity: .25;
   letter-spacing: -1px;
   display: inline-block;
-  width: 100px;
+  width: 96px;
   text-align: right;
   margin-right: 16px; }
 
