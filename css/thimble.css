@@ -1,6 +1,4 @@
-/* ////////////////////
-  The Nimble Thimble
-//////////////////// */
+/* The Nimble Thimble v1.1-beta */
 
 /* Resets */
 h1, h2, h3, h4, h5, p, blockquote, figure, ol, ul {margin: 0;padding: 0;}
@@ -62,7 +60,7 @@ p {
 .text-right {text-align:right;}
 .text-center {text-align:center;}
 .text-block {text-align:justify;}
-em, i {
+em, i, .em {
   font-style:italic;
   line-height:inherit;
 }

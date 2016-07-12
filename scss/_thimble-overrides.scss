@@ -1,18 +1,22 @@
-/* /////////////////////
-  ThimbleCSS Overrides
-////////////////////// */
-
+// ThimbleCSS Overrides
+$project-name: ThimbleCSS;  // Set project name without quotes
 
 // The Nimble Base
-$font-family: sans-serif;
-$header-font: sans-serif;
+$body-font: Verdana, Geneva, sans-serif;
+$header-font: Verdana, Geneva, sans-serif;
+
 $font-color:#616161;
+$subfont-color: rgba($font-color,.6);
 
 $blue: #2266a7;
-$yellow: #e2d21f;
+$yellow: #FFE066;
 $red: #f15a3b;
 $green: #57a290;
+$gray:#6e7e85;
 
+$primary-color: $blue;
+$secondary-color: $green;
+$tertiary-color: $gray;
 
 // Transitions
 $fast-speed:all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
@@ -20,13 +24,11 @@ $normal-speed:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 $slow-speed:all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 $slowest-speed:all 0.75s cubic-bezier(0.4, 0, 0.2, 1);
 
-
 // Shadows
 $base-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 2px 8px rgba(0, 0, 0, 0.14);
 $hover-shadow: 0 6px 16px rgba(0, 0, 0, 0.25), 0 4px 20px rgba(0, 0, 0, 0.18);
 $selected-shadow: 0 12px 16px rgba(0, 0, 0, 0.25), 0 18px 40px rgba(0, 0, 0, 0.19);
 $solid-shadow: 3px 3px 0px rgba(0,0,0,0.2);
-
 
 // Metrics
 $site-width:960px;
@@ -37,7 +39,6 @@ $cell-padding:.75rem;
 $small-radius: 2px;
 $radius: 4px;
 $large-radius: 6px;
-
 
 // Media Break Adjustments
 $large-up: "only screen and (min-width: #{75.063em})"; // < 1201px
@@ -57,52 +58,13 @@ $smaller-down: "only screen and (max-width: #{40em})"; // > 640px
 $tiny-up: "only screen and (max-width: #{30.063em})"; // < 481px
 $tiny-down: "only screen and (max-width: #{30rem})"; // > 480px
 
+// Logos
+// User relative path from your main CSS file OR set to FALSE
+$logo-path: false;
+$logo-path-light: false;
 
-// MIXINS
-// Scroll Bar Mixin
-@mixin scrollbar($track, $bar, $width, $radius) {
-  &::-webkit-scrollbar {background: $track; width:$width;}
-  &::-webkit-scrollbar-thumb {background: $bar; border-radius:$radius}
-  &::-webkit-scrollbar-corner {background: $track;}
-  scrollbar-base-color: $bar;
-  scrollbar-3dlight-color: $bar;
-  scrollbar-highlight-color: $bar;
-  scrollbar-track-color: $track;
-  scrollbar-arrow-color: $track;
-  scrollbar-shadow-color: $bar;
-  scrollbar-dark-shadow-color: $bar;
-}
+$logo-icon-path: false;
+$logo-icon-path-light: false;
 
-
-// Transform Mixin
-@mixin transform($trans) {
-  -webkit-transform: $trans;
-  transform: $trans;
-}
-
-// CSS Columns Mixin
-@mixin columns($count, $gap) {
-  -webkit-column-count:$count;
-  -moz-column-count:$count;
-  column-count:$count;
-  -webkit-column-gap:$gap;
-  -moz-column-gap:$gap;
-  column-gap:$gap;
-  -webkit-column-break-inside:avoid;
-  -moz-column-break-inside:avoid;
-  -ms-column-break-inside:avoid;
-  column-break-inside:avoid;
-}
-
-// Keyframe Mixins
-@mixin keyframes($animationName) {
-  @-webkit-keyframes #{$animationName} {@content;}
-  @-moz-keyframes #{$animationName} {@content;}
-  @keyframes #{$animationName} {@content;}
-};
-@mixin call-keyframes($ani...) {
-  -webkit-animation: $ani;
-  -moz-animation: $ani;
-  -ms-animation: $ani;
-  animation: $ani;
-};
+$logotype-path: false;
+$logotype-path-light: false;

@@ -1,6 +1,4 @@
-/* ////////////////////
-      ThimbleCSS
-//////////////////// */
+// ThimbleCSS Core v1.1-beta
 
 // Resets
 h1, h2, h3, h4, h5, p, blockquote, figure, ol, ul {margin: 0;padding: 0;}
@@ -30,7 +28,7 @@ html {
 body {
   margin:0;
   line-height:1.6;
-  font-family:$font-family;
+  font-family:$body-font;
   color:$font-color;
 }
 hr {
@@ -66,7 +64,7 @@ p {
 .text-right {text-align:right;}
 .text-center {text-align:center;}
 .text-block {text-align:justify;}
-em, i {
+em, i, .em {
   font-style:italic;
   line-height:inherit;
 }
@@ -113,7 +111,7 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
 .h3 {font-size:2rem;line-height:1.55;}
 .h4 {font-size:1.5rem;line-height:1.7;}
 .h5 {font-size:1rem;line-height:1.85;}
-.sub-header {font-weight:200;opacity:.6;}
+.sub-header {font-weight:200;color:$subfont-color;}
 .super-header.vw {font-size:5vw;}
 .h1.vw {font-size:3.5vw;}
 .h2.vw {font-size:3vw;}
