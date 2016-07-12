@@ -1,10 +1,10 @@
-/* ThimbleCSS Overrides */
-
+// ThimbleCSS Overrides
 $project-name: ThimbleCSS;  // Set project name without quotes
 
 // The Nimble Base
 $body-font: Verdana, Geneva, sans-serif;
-$header-font: "Poppins", sans-serif; // NEED TO RESET BEFORE MERGE TO MASTER
+$header-font: Verdana, Geneva, sans-serif;
+
 $font-color:#616161;
 $subfont-color: rgba($font-color,.6);
 
