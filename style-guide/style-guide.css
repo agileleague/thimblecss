@@ -857,7 +857,8 @@ ol {
   text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25); }
   .intro .sub-header {
     color: inherit;
-    opacity: .6; }
+    opacity: .6;
+    line-height: 1.1; }
     .intro .sub-header:after {
       display: inline-block;
       content: "ThimbleCSS"; }
@@ -880,10 +881,7 @@ ol {
   padding: 3rem 0 4rem;
   display: none; }
 
-.logo-container {
-  display: block !important; }
-
-.icon-logo, .icon-block, .logotype, .main-logo {
+.icon-logo, .icon-block, .logotype, .main-logos {
   display: none; }
 
 .logo-block {
@@ -897,9 +895,6 @@ ol {
   background-repeat: no-repeat;
   display: none; }
 
-.icon-logo {
-  display: flex; }
-
 .icon-block {
   float: left;
   width: 180px;
@@ -908,12 +903,6 @@ ol {
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat; }
-
-.icon-normal {
-  display: block;
-  background-image: url("images/thimble-logo.svg");
-  background-color: #f4f4f4;
-  border-color: #f4f4f4; }
 
 .logotype-block {
   width: 100%;
@@ -1093,5 +1082,20 @@ ol {
   width: 96px;
   text-align: right;
   margin-right: 16px; }
+
+footer {
+  width: 100%;
+  padding: 4rem 0;
+  background-color: #6e7e85;
+  color: #fff;
+  font-size: .75rem; }
+  footer a {
+    color: inherit; }
+  footer .by-thimble {
+    color: rgba(255, 255, 255, 0.2); }
+  footer .brought {
+    text-transform: uppercase; }
+    footer .brought a {
+      text-decoration: underline; }
 
 /*# sourceMappingURL=style-guide.css.map */

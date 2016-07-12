@@ -38,6 +38,7 @@ $style-body-background: #f7f7f7;
   .sub-header {
     color:inherit;
     opacity:.6;
+    line-height:1.1;
     &:after {
       display: inline-block;
       content: "#{$project-name}";
@@ -96,12 +97,12 @@ $style-body-background: #f7f7f7;
   }
 }
 
-.icon-logo, .icon-block, .logotype, .main-logo {
+.icon-logo, .icon-block, .logotype, .main-logos {
   display:none;
 }
 
 @if $logo-path != false or $logo-path-light != false {
-  .main-logo {
+  .main-logos {
     display:flex;
   }
 }
@@ -350,5 +351,22 @@ $style-body-background: #f7f7f7;
     width:96px;
     text-align:right;
     margin-right:16px;
+  }
+}
+
+// footer
+footer {
+  width:100%;
+  padding:4rem 0;
+  background-color:$gray;
+  color:#fff;
+  font-size:.75rem;
+  a {color:inherit;}
+  .by-thimble {
+    color:rgba(255,255,255,.2);
+  }
+  .brought {
+    text-transform:uppercase;
+    a {text-decoration:underline;}
   }
 }
