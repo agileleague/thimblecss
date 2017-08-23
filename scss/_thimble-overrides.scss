@@ -1,22 +1,24 @@
 // ThimbleCSS Overrides
-$project-name: ThimbleCSS;  // Set project name without quotes
 
-// The Nimble Base
-$body-font: Verdana, Geneva, sans-serif;
-$header-font: Verdana, Geneva, sans-serif;
 
-$font-color:#616161;
-$subfont-color: rgba($font-color,.6);
-
+// Colors
 $blue: #2266a7;
 $yellow: #FFE066;
 $red: #f15a3b;
 $green: #57a290;
 $gray:#6e7e85;
 
-$primary-color: $blue;
-$secondary-color: $green;
-$tertiary-color: $gray;
+
+
+// Typography
+$body-font: Verdana, Geneva, sans-serif;
+$header-font: Verdana, Geneva, sans-serif;
+
+$font-color:#616161;
+$subfont-color: rgba($font-color,.6);
+
+$link-color:$blue;
+$link-hover:$red;
 
 // Transitions
 $fast-speed:all 0.18s cubic-bezier(0.4, 0, 0.2, 1);

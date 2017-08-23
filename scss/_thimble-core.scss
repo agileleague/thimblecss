@@ -45,10 +45,10 @@ hr {
 a {
 	text-decoration:none;
 	transition:$normal-speed;
-	color:$blue;
+	color:$link-color;
   cursor:pointer;
   &:active, &:hover {
-    color:$red;
+    color:$link-hover;
   }
   img {
     border:0;
@@ -167,6 +167,9 @@ ol {
 }
 
 // FlexGrid
+.full {
+  margin:0 auto;
+}
 .full, .content-block {
 	max-width:$site-width;
 	width:100%;
@@ -178,7 +181,7 @@ ol {
 }
 
 // Rows
-.row, .full {
+.row {
   margin-left: auto;
 	margin-right: auto;
 	position:relative;
