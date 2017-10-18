@@ -1,14 +1,11 @@
 // ThimbleCSS Overrides
 
-
 // Colors
 $blue: #2266a7;
 $yellow: #FFE066;
 $red: #f15a3b;
 $green: #57a290;
 $gray:#6e7e85;
-
-
 
 // Typography
 $body-font: Verdana, Geneva, sans-serif;
@@ -36,37 +33,11 @@ $solid-shadow: 3px 3px 0px rgba(0,0,0,0.2);
 $site-width:960px;
 $small-site-width:760px;
 
-$cell-padding:.75rem;
-
-$small-radius: 2px;
-$radius: 4px;
-$large-radius: 6px;
+$cell-margin:.5rem;
+$cell-padding:.5rem;
 
 // Media Break Adjustments
-$large-up: "only screen and (min-width: #{75.063em})"; // < 1201px
-$large-down: "only screen and (max-width: #{75em})"; // > 1200px
-
-$medium-up: "only screen and (min-width: #{64.063em})"; // < 1025px
-$medium-down: "only screen and (max-width: #{64em})"; // > 1024px
-
-$medium-only: "only screen and (max-width: #{64em}) and (min-width: #{48.063em})";
-
-$small-up: "only screen and (min-width: #{48.063em})"; // < 769px
-$small-down: "only screen and (max-width: #{48em})"; // > 768px
-
-$smaller-up: "only screen and (min-width: #{40.063em})"; // < 641px
-$smaller-down: "only screen and (max-width: #{40em})"; // > 640px
-
-$tiny-up: "only screen and (max-width: #{30.063em})"; // < 481px
-$tiny-down: "only screen and (max-width: #{30rem})"; // > 480px
-
-// Logos
-// User relative path from your main CSS file OR set to FALSE
-$logo-path: false;
-$logo-path-light: false;
-
-$logo-icon-path: false;
-$logo-icon-path-light: false;
-
-$logotype-path: false;
-$logotype-path-light: false;
+$small-break:  480px;
+$medium-break: 768px;
+$large-break:  1024px;
+$xlarge-break: 1200px;
