@@ -39,7 +39,9 @@ hr {
 }
 .float-left {float:left;}
 .float-right {float:right;}
-.hide, .hide-large {display:none!important;}
+.hide, .xlarge-hide {display:none!important;}
+
+.small-show, .medium-show, .large-show, xlarge-show {display:none;}
 
 // clears
 .clear:before,.clear:after {content:'';display:table}
@@ -197,8 +199,8 @@ svg:not(:root) {
   flex-flow:row wrap;
   &.collapse {
     > .cell {
-      padding-left:0;
-      padding-right:0;
+      margin-left:0;
+      margin-right:0;
     }
   }
 }
@@ -233,7 +235,7 @@ svg:not(:root) {
           justify-content:space-around;
 }
 
-// Row Direction
+// Grid Direction
 .reverse {
   -webkit-flex-direction:row-reverse;
           flex-direction:row-reverse;
@@ -254,7 +256,27 @@ svg:not(:root) {
 
 // Functions
 $celladjust:$cell-margin*2;
+
+$cell-sizes:  (
+  (twelve, 12),
+  (eleven, 11),
+  (ten, 10),
+  (nine, 9),
+  (eight, 8),
+  (seven, 7),
+  (six, 6),
+  (five, 5),
+  (four, 4),
+  (three, 3),
+  (two, 2),
+  (one, 1)
+);
+
 @mixin sizing($size) {
+
+  // Visibilty
+  .#{$size}hide { display:none!important;}
+  .#{$size}show { display:inherit!important;}
 
   // Typography
   .#{$size}text-left {text-align:left;}
@@ -262,58 +284,25 @@ $celladjust:$cell-margin*2;
   .#{$size}text-center {text-align:center;}
   .#{$size}text-justify {text-align:justify;}
 
-  // Cell Sizes
-  .#{$size}twelve {
-    max-width:calc( 100% - #{$celladjust});
-    flex: 0 0 calc( 100% - #{$celladjust});
+
+  @each $size-text, $size-int in $cell-sizes {
+    .#{$size}#{$size-text} {
+      max-width:calc( 100%/12 * #{$size-int} - #{$celladjust} );
+      flex: 0 0 calc( 100%/12 * #{$size-int} - #{$celladjust} );
+      &.collapse {
+        max-width:calc( 100%/12 * #{$size-int} );
+        flex: 0 0 calc( 100%/12 * #{$size-int} );
+      }
+    }
   }
-  .#{$size}eleven {
-    max-width:calc( 100%/12 * 11 - #{$celladjust} );
-    flex: 0 0 calc( 100%/12 * 11 - #{$celladjust} );
-  }
-  .#{$size}ten {
-    max-width:calc( 100%/12 * 10 - #{$celladjust} );
-    flex: 0 0 calc( 100%/12 * 10 - #{$celladjust} );
-  }
-  .#{$size}nine {
-    max-width:calc( 75% - #{$celladjust} );
-    flex: 0 0 calc( 75% - #{$celladjust} );
-  }
-  .#{$size}eight {
-    max-width:calc( 100%/12 * 8 - #{$celladjust});
-    flex: 0 0 calc( 100%/12 * 8 - #{$celladjust});
-  }
-  .#{$size}seven  {
-    max-width:calc( 100%/12 * 7 - #{$celladjust});
-    flex: 0 0 calc( 100%/12 * 7 - #{$celladjust});
-  }
-  .#{$size}six {
-    max-width:calc( 50% - #{$celladjust} );
-    flex: 0 0 calc( 50% - #{$celladjust} );
-  }
-  .#{$size}five {
-    max-width:calc( 100%/12 * 5 - #{$celladjust});
-    flex: 0 0 calc( 100%/12 * 5 - #{$celladjust});
-  }
-  .#{$size}four {
-    max-width:calc( 100%/12 * 4 - #{$celladjust});
-    flex: 0 0 calc( 100%/12 * 4 - #{$celladjust});
-  }
-  .#{$size}three {
-    max-width:calc( 25% - #{$celladjust} );
-    flex: 0 0 calc( 25% - #{$celladjust} );
-  }
-  .#{$size}two {
-    max-width:calc( 100%/12 * 2 - #{$celladjust} );
-    flex: 0 0 calc( 100%/12 * 2 - #{$celladjust} );
-  }
-  .#{$size}one {
-    max-width:calc( 100%/12 - #{$celladjust} );
-    flex: 0 0 calc( 100%/12 - #{$celladjust} );
-  }
+
   .#{$size}fifth {
     max-width:calc( 20% - #{$celladjust} );
     flex: 0 0 calc( 20% - #{$celladjust} );
+    &.collapse {
+      max-width:20%;
+      flex: 0 0 20%;
+    }
   }
 
   // Ordering
@@ -331,31 +320,6 @@ $celladjust:$cell-margin*2;
   .#{$size}order-12 {-webkit-order:12;order:12;}
 }
 
-
-
-// Cells
-.cell {
-  -webkit-flex:1 1 auto;
-          flex:1 1 auto;
-  min-height:0px;
-  min-width:0px;
-  max-width:100%;
-  margin-left:$cell-margin;
-  margin-right:$cell-margin;
-  padding-left:$cell-padding;
-  padding-right:$cell-padding;
-  &.fit {
-    -webkit-flex:0 0 auto;
-            flex:0 0 auto;
-    width:auto;
-  }
-  &.collapse {
-    padding-left:0;
-    padding-right:0;
-  }
-}
-
-@include sizing(null);
 
 // Alignment
 .align-top {
@@ -385,6 +349,35 @@ $celladjust:$cell-margin*2;
           align-items:stretch;
 }
 
+
+// Cells
+.cell {
+  -webkit-flex:1 1 auto;
+          flex:1 1 auto;
+  min-height:0px;
+  min-width:0px;
+  max-width:100%;
+  margin-left:$cell-margin;
+  margin-right:$cell-margin;
+  padding-left:$cell-padding;
+  padding-right:$cell-padding;
+  &.fit {
+    -webkit-flex:0 0 auto;
+            flex:0 0 auto;
+    width:auto;
+  }
+  &.fill {
+    -webkit-flex:1 1;
+            flex:1 1;
+    width:auto;
+  }
+  &.collapse {
+    margin-left:0;
+    margin-right:0;
+  }
+}
+
+@include sizing(null);
 
 // Media Queries
 @media only screen and (min-width: #{$small-break}) {
