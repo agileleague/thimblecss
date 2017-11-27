@@ -286,6 +286,8 @@ $cell-sizes:  (
 
 
   @each $size-text, $size-int in $cell-sizes {
+
+    // Create Cell Sizes
     .#{$size}#{$size-text} {
       max-width:calc( 100%/12 * #{$size-int} - #{$celladjust} );
       flex: 0 0 calc( 100%/12 * #{$size-int} - #{$celladjust} );
@@ -294,6 +296,9 @@ $cell-sizes:  (
         flex: 0 0 calc( 100%/12 * #{$size-int} );
       }
     }
+
+    // Create Cell ordering
+    .#{$size}order-#{$size-int}  {-webkit-order:#{$size-int};order:#{$size-int};}
   }
 
   .#{$size}fifth {
@@ -305,19 +310,6 @@ $cell-sizes:  (
     }
   }
 
-  // Ordering
-  .#{$size}order-1  {-webkit-order:1;order:1;}
-  .#{$size}order-2  {-webkit-order:2;order:2;}
-  .#{$size}order-3  {-webkit-order:3;order:3;}
-  .#{$size}order-4  {-webkit-order:4;order:4;}
-  .#{$size}order-5  {-webkit-order:5;order:5;}
-  .#{$size}order-6  {-webkit-order:6;order:6;}
-  .#{$size}order-7  {-webkit-order:7;order:7;}
-  .#{$size}order-8  {-webkit-order:8;order:8;}
-  .#{$size}order-9  {-webkit-order:9;order:9;}
-  .#{$size}order-10 {-webkit-order:10;order:10;}
-  .#{$size}order-11 {-webkit-order:11;order:11;}
-  .#{$size}order-12 {-webkit-order:12;order:12;}
 }
 
 
