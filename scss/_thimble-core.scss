@@ -386,6 +386,10 @@ $cell-sizes:  (
     margin-left:0;
     margin-right:0;
   }
+  &.collapse-padding {
+    padding-left:0;
+    padding-right:0;
+  }
 }
 
 @include sizing(null);
