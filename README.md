@@ -5,7 +5,7 @@ A Nimble CSS Framework
 built with flexbox  
 Powered by [the Agile League](http://agileleague.com/)
 
-v1.1-beta  
+v2.0
 
 Learn more at [ThimbleCSS](http://thimblecss.com/)
 
@@ -13,18 +13,10 @@ Learn more at [ThimbleCSS](http://thimblecss.com/)
 
 ###Set up Thimble
 
-Just add the thimble.css to your header:<br />
+Compile thimble to your style sheet
 
 ```
-<!-- ThimbleCSS -->
-<link rel="stylesheet" href="thimble.min.css" >
-```
-
-Or if you're using SASS:
-```
-// ThimbleCSS
-@import 'thimble-overrides.scss';
-@import 'thimble.scss';
+sass --watch thimble.scss:style.css
 ```
 
 For Complete docs, please visit [ThimbleCSS Docs](http://thimblecss.com/docs)
@@ -37,7 +29,6 @@ For Complete docs, please visit [ThimbleCSS Docs](http://thimblecss.com/docs)
 * Center anything
 * Stretch columns
 * Responsive header sizes
-* SASS compatible
 
 
 

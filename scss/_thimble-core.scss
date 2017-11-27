@@ -372,11 +372,11 @@ $cell-sizes:  (
 @include sizing(null);
 
 // Media Queries
-@media only screen and (min-width: #{$small-break}) {
+@media #{$small} {
   @include sizing(small-);
 }
 
-@media only screen and (min-width: #{$medium-break}) {
+@media #{$medium} {
   @include sizing(medium-);
 
   // VW Headers
@@ -388,10 +388,10 @@ $cell-sizes:  (
   .h5.vw {font-size:1.5vw;}
 }
 
-@media only screen and (min-width: #{$large-break}) {
+@media #{$large} {
   @include sizing(large-);
 }
 
-@media only screen and (min-width: #{$xlarge-break}) {
+@media #{$xlarge} {
   @include sizing(xlarge-);
 }

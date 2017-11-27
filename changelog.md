@@ -8,7 +8,8 @@ Change Log
 - Remove Style Guide
 - Removed .css version
 - Rebuild grid - Renamed Rows and columns to reflect a single grid box, removed padding from grid cells and replaced with margins for better background handling
-- create mixin for grid and typographic breakpoint sizing 
+- create mixin for grid and typographic breakpoint sizing
+- create mobile first media mixins 
 
 ## v1.1-beta
 - add style-guide html and css
