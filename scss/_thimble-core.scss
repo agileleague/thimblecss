@@ -197,18 +197,6 @@ svg:not(:root) {
   backface-visibility:hidden;
   -webkit-flex-flow:row wrap;
   flex-flow:row wrap;
-  &.collapse {
-    > .cell {
-      margin-left:0;
-      margin-right:0;
-    }
-  }
-  &.collapse-padding {
-    > .cell {
-      padding-left:0;
-      padding-right:0;
-    }
-  }
 }
 .nowrap {
   -webkit-flex-wrap:nowrap;
@@ -313,19 +301,6 @@ $cell-sizes:  (
     &.collapse {
       max-width:20%;
       flex: 0 0 20%;
-    }
-  }
-
-  // Collapse row
-  .#{$size}collapse.grid {
-    @each $size-text, $size-int in $cell-sizes {
-
-      // Create Cell Sizes
-      > .#{$size}#{$size-text} {
-        max-width:calc( 100%/12 * #{$size-int} );
-        flex: 0 0 calc( 100%/12 * #{$size-int} );
-      }
-
     }
   }
 
