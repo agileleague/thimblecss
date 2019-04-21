@@ -1,6 +1,11 @@
 Change Log
 ==============
 
+## V2.1
+- Fix xlarge hide class
+- Update typography system to augmented fourth scale
+- remove class requirement for headers
+
 ## v2.0
 - Remove cards
 - Remove buttons

@@ -27,7 +27,7 @@ html {
 }
 body {
   margin:0;
-  line-height:1.4;
+  line-height:1.45;
   font-family:$body-font;
   color:$font-color;
 }
@@ -41,7 +41,7 @@ hr {
 .float-right {float:right;}
 .hide, .xlarge-hide {display:none!important;}
 
-.small-show, .medium-show, .large-show, xlarge-show {display:none;}
+.small-show, .medium-show, .large-show, .xlarge-show {display:none;}
 
 // clears
 .clear:before,.clear:after {content:'';display:table}
@@ -113,11 +113,11 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
   }
 }
 .super-header {font-size:4rem;line-height:1.18;}
-.h1 {font-size:3rem;line-height:1.22;}
-.h2 {font-size:2.5rem;line-height:1.4;}
-.h3 {font-size:2rem;line-height:1.55;}
-.h4 {font-size:1.5rem;line-height:1.7;}
-.h5 {font-size:1rem;line-height:1.85;}
+h1 {font-size:3.998rem;line-height:1.22;}
+h2 {font-size:2.827rem;line-height:1.4;}
+h3 {font-size:1.999rem;line-height:1.55;}
+h4 {font-size:1.414rem;line-height:1.7;}
+h5 {font-size:1rem;line-height:1.85;}
 .sub-header {color:$subfont-color;}
 
 
@@ -267,7 +267,6 @@ $cell-sizes:  (
 );
 
 @mixin sizing($size) {
-
   // Visibilty
   .#{$size}hide { display:none!important;}
   .#{$size}show { display:inherit!important;}
@@ -280,7 +279,6 @@ $cell-sizes:  (
 
 
   @each $size-text, $size-int in $cell-sizes {
-
     // Create Cell Sizes
     .#{$size}#{$size-text} {
       max-width:calc( 100%/12 * #{$size-int} - #{$celladjust} );
