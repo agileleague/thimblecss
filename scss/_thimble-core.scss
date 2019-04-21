@@ -182,9 +182,17 @@ svg:not(:root) {
 // FlexGrid
 .full {
   margin:0 auto;
-}
-.full {
 	max-width:$site-width;
+	width:100%;
+}
+.small-full {
+  margin:0 auto;
+	max-width:$small-site-width;
+	width:100%;
+}
+.large-full {
+  margin:0 auto;
+	max-width:$large-site-width;
 	width:100%;
 }
 

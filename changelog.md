@@ -1,6 +1,9 @@
 Change Log
 ==============
 
+## V2.11
+- Add large site width option
+
 ## V2.1
 - Fix xlarge hide class
 - Update typography system to augmented fourth scale
