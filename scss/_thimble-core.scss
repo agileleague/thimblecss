@@ -179,7 +179,7 @@ svg:not(:root) {
   }
 }
 
-// FlexGrid
+// Center container
 .full {
   margin:0 auto;
 	max-width:$site-width;
@@ -205,6 +205,12 @@ svg:not(:root) {
   backface-visibility:hidden;
   -webkit-flex-flow:row wrap;
   flex-flow:row wrap;
+  &.collapse-padding {
+    > .cell {
+      padding-left:0;
+      padding-right:0;
+    }
+  }
 }
 .nowrap {
   -webkit-flex-wrap:nowrap;
