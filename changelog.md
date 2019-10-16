@@ -1,6 +1,11 @@
 Change Log
 ==============
 
+## V2.12
+- Add h6 sizing in augmented fourth headers
+- Add collapse-padding option to grid
+- Fix super-header sizing
+
 ## V2.11
 - Add large site width option
 
