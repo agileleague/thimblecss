@@ -1,17 +1,23 @@
 ThimbleCSS
 ==============
 
-A Nimble CSS Framework  
-built with flexbox  
+A Simple & Responsive CSS Framework 
 Powered by [the Agile League](http://agileleague.com/)
 
-v2.0
+v2.13
 
-Learn more at [ThimbleCSS](http://thimblecss.com/)
+Full Documentation at [ThimbleCSS](http://thimblecss.com/)
 
 
+### Featuring
+* Grid with basic alignment and ordering
+* Basic typography styles
+* Simple media containers
 
-###Set up Thimble
+That's it! No bloat or modules to override, just the basics for a fast and lightweight build.
+
+
+### Set up Thimble
 
 Compile thimble to your style sheet
 
@@ -19,17 +25,8 @@ Compile thimble to your style sheet
 sass --watch thimble.scss:style.css
 ```
 
-For Complete docs, please visit [ThimbleCSS Docs](http://thimblecss.com/docs)
 
-
-
-### Featuring
-* Unlimited columns
-* Easy content re-ordering
-* Center anything
-* Stretch columns
-* Responsive header sizes
-
+For Complete documentation, please visit [ThimbleCSS](http://thimblecss.com/)
 
 
 ### License

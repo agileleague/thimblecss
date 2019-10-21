@@ -1,6 +1,12 @@
 Change Log
 ==============
 
+## V2.13
+- Rename full, small-full, large-full to container, small-container, large-container respectively
+- Add align-full
+- Add align-wide
+- Update Readme
+
 ## V2.12
 - Add h6 sizing in augmented fourth headers
 - Add collapse-padding option to grid
