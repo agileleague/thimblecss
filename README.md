@@ -4,7 +4,7 @@ ThimbleCSS
 A Simple & Responsive CSS Framework 
 Powered by [the Agile League](http://agileleague.com/)
 
-v2.13
+v2.14
 
 Full Documentation at [ThimbleCSS](http://thimblecss.com/)
 

@@ -1,6 +1,10 @@
 Change Log
 ==============
 
+
+## V2.14
+- Fix mixins typo for large-down media query
+
 ## V2.13
 - Rename full, small-full, large-full to container, small-container, large-container respectively
 - Add align-full

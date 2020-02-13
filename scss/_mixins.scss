@@ -67,5 +67,5 @@ $xlarge: 'only screen and (min-width: #{$xlarge-break})';
 
 $small-down:  'only screen and (max-width: #{$small-break - 1px})';
 $medium-down: 'only screen and (max-width: #{$medium-break - 1px})';
-$large-down:  'only screen and (mmax-width: #{$large-break - 1px})';
+$large-down:  'only screen and (max-width: #{$large-break - 1px})';
 $xlarge-down: 'only screen and (max-width: #{$xlarge-break - 1px})';
