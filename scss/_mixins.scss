@@ -14,25 +14,11 @@
   scrollbar-dark-shadow-color: $bar;
 }
 
-// Transform Mixin
-@mixin transform($trans) {
-  -ms-transform: $trans;
-  -webkit-transform: $trans;
-  transform: $trans;
-}
-
-// CSS Columns Mixin
+// CSS Mutli-columns Mixin
 @mixin columns($count, $gap) {
-  -webkit-column-count:$count;
-  -moz-column-count:$count;
   column-count:$count;
-  -webkit-column-gap:$gap;
-  -moz-column-gap:$gap;
   column-gap:$gap;
-  -webkit-column-break-inside:avoid;
-  -moz-column-break-inside:avoid;
-  -ms-column-break-inside:avoid;
-  column-break-inside:avoid;
+  break-inside:avoid;
 }
 
 // Keyframe Mixins
