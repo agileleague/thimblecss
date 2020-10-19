@@ -1,6 +1,6 @@
 // Mixins
 
-// Scroll Bar Mixin
+// Style Scroll Bar 
 @mixin scrollbar($track, $bar, $width, $radius) {
   &::-webkit-scrollbar {background: $track; width:$width;}
   &::-webkit-scrollbar-thumb {background: $bar; border-radius:$radius}
@@ -11,41 +11,24 @@
   scrollbar-track-color: $track;
   scrollbar-arrow-color: $track;
   scrollbar-shadow-color: $bar;
-  scrollbar-dark-shadow-color: $bar;
+  scrollbar-dark-shadow-color: $bar
 }
 
-// CSS Mutli-columns Mixin
+// CSS Mutli-columns
 @mixin columns($count, $gap) {
   column-count:$count;
   column-gap:$gap;
-  break-inside:avoid;
+  break-inside:avoid
 }
 
-// Keyframe Mixins
-@mixin keyframes($animationName) {
-  @-webkit-keyframes #{$animationName} {@content;}
-  @-moz-keyframes #{$animationName} {@content;}
-  @keyframes #{$animationName} {@content;}
-};
-@mixin call-keyframes($ani...) {
-  -webkit-animation: $ani;
-  -moz-animation: $ani;
-  -ms-animation: $ani;
-  animation: $ani;
-};
-
-// Center Mixin
+// Quick XY center with flexbox
 @mixin quick-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  align-items: center
 }
 
 
-// Media Mixins
+// Media
 $small:  'only screen and (min-width: #{$small-break})';
 $medium: 'only screen and (min-width: #{$medium-break})';
 $large:  'only screen and (min-width: #{$large-break})';
