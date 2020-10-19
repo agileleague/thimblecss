@@ -32,7 +32,7 @@ main {display:block}
 pre {
   font-family: monospace, monospace;
   font-size: 1em;
-  overflow: auto;
+  overflow: auto
 }
 h1, h2, h3, h4, h5, h6, p, blockquote, figure, ol, ul {margin:0;padding:0}
 
@@ -202,7 +202,7 @@ iframe {border:0;border-style:none}
   width:100vw
 }
 
-// Show/hide utility
+// Show/Hide utility
 .hide, .xlarge-hide {display:none!important}
 .small-show, .medium-show, .large-show, .xlarge-show {display:none}
 
@@ -223,12 +223,19 @@ iframe {border:0;border-style:none}
 .nowrap {flex-wrap:nowrap}
 .wrap-reverse {flex-wrap:wrap-reverse}
 
-// Justify grid
+// Justify Grid (Vertical Alignment)
 .justify-start {justify-content:flex-start}
 .justify-end {justify-content:flex-end}
 .justify-center {justify-content:center}
 .justify-space {justify-content:space-between}
 .justify-around { justify-content:space-around}
+
+// Alignment (Horizontal Alignment)
+.align-top {align-items:flex-start;align-self:flex-start}
+.align-bottom {align-items:flex-end;align-self:flex-end}
+.align-center {align-items:center;align-self:center}
+.align-baseline {align-items:baseline}
+.align-stretch {align-items:stretch}
 
 // Grid Direction
 .reverse {flex-direction:row-reverse}
@@ -243,7 +250,6 @@ iframe {border:0;border-style:none}
 
 // Functions
 $celladjust:$cell-margin*2;
-
 $cell-sizes:  (
   (twelve, 12),
   (eleven, 11),
@@ -297,27 +303,9 @@ $cell-sizes:  (
 
 }
 
-// Alignment
-.align-top {
-  align-items:flex-start;
-  align-self:flex-start
-}
-.align-bottom {
-  align-items:flex-end;
-  align-self:flex-end
-}
-.align-center {
-  align-items:center;
-  align-self:center
-}
-.align-baseline {align-items:baseline}
-.align-stretch {align-items:stretch}
-
 // Cells
 .cell {
   flex:1 1 auto;
-  min-height:0px;
-  min-width:0px;
   max-width:100%;
   margin-left:$cell-margin;
   margin-right:$cell-margin;
