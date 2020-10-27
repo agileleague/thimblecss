@@ -1,6 +1,12 @@
 Change Log
 ==============
 
+## V2.2
+- Update Sanitize. Based on https://github.com/csstools/sanitize.css/
+- Remove legacy webkit and moz prefixes
+- Remove transform mixin
+- Remove keyframe mixin
+- Remove trailing semi-colons from core
 
 ## V2.14
 - Fix mixins typo for large-down media query
