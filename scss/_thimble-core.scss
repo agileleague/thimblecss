@@ -50,6 +50,7 @@ em, i, .em {
 .uppercase {text-transform:uppercase}
 .capitalize {text-transform:capitalize}
 .lowercase {text-transform:lowercase}
+.underline {text-decoration:underline}
 strong, b, .strong {
   font-weight:bolder;
   line-height:inherit
@@ -76,17 +77,14 @@ sub, .sub {bottom:-.25em}
 }
 
 // Headers
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family:$header-font;
   font-weight:normal;
   text-rendering:optimizeLegibility;
   font-size:inherit;
-  color:$header-color;
-  &.super-header {
-    font-size:5.653rem;
-    line-height:1.18
-  }
+  color:$header-color
 }
+h1.super-header {font-size:5.653rem;line-height:1.18}
 h1 {font-size:3.998rem;line-height:1.22}
 h2 {font-size:2.827rem;line-height:1.4}
 h3 {font-size:1.999rem;line-height:1.55}
@@ -149,7 +147,7 @@ ol {
 }
 
 // Media
-img {
+img, iframe {
   max-width:100%;
   height:auto;
   border:0;
@@ -171,7 +169,6 @@ svg:not(:root) {
   	height:100%
   }
 }
-iframe {border:0;border-style:none}
 
 // Center container
 .container {
@@ -276,7 +273,6 @@ $cell-sizes:  (
   .#{$size}text-center {text-align:center}
   .#{$size}text-justify {text-align:justify}
 
-
   @each $size-text, $size-int in $cell-sizes {
     // Create Cell Sizes
     .#{$size}#{$size-text} {
@@ -341,11 +337,11 @@ $cell-sizes:  (
 
   // VW Headers
   .super-header.vw {font-size:5vw}
-  .h1.vw {font-size:3.5vw}
-  .h2.vw {font-size:3vw}
-  .h3.vw {font-size:2.5vw}
-  .h4.vw {font-size:2vw}
-  .h5.vw {font-size:1.5vw}
+  h1.vw {font-size:3.5vw}
+  h2.vw {font-size:3vw}
+  h3.vw {font-size:2.5vw}
+  h4.vw {font-size:2vw}
+  h5.vw {font-size:1.5vw}
 }
 
 @media #{$large} {

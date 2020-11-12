@@ -7,6 +7,11 @@ Change Log
 - Remove transform mixin
 - Remove keyframe mixin
 - Remove trailing semi-colons from core
+- Remove header class sizing
+- remove super-header for all but h1
+- Add reduced motion query to core
+- Add text underline class
+- Update large media break to 1280px
 
 ## V2.14
 - Fix mixins typo for large-down media query
