@@ -1,0 +1,30 @@
+{
+  "name": "thimblecss",
+  "version": "2.2.1",
+  "description": "A nimble micro CSS Framework",
+  "main": "scss/thimble.scss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agileleague/thimblecss.git"
+  },
+  "keywords": [
+    "css",
+    "css3",
+    "flexbox",
+    "front-end",
+    "framework",
+    "html",
+    "html5",
+    "mobile-first",
+    "responsive",
+    "sanitize",
+    "scss",
+    "web"
+  ],
+  "author": "Drew Nolte <drew@agileleague.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agileleague/thimblecss/issues"
+  },
+  "homepage": "https://thimblecss.com"
+}

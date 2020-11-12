@@ -1,7 +1,7 @@
 Change Log
 ==============
 
-## V2.2
+## V2.2.1
 - Update Sanitize. Based on https://github.com/csstools/sanitize.css/
 - Remove legacy webkit and moz prefixes
 - Remove transform mixin
