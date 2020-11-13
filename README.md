@@ -1,8 +1,8 @@
 ThimbleCSS
 ==============
 
-A Simple & Responsive CSS Framework 
-Powered by [the Agile League](https://agileleague.com/)
+A nimble micro CSS Framework. 
+Powered by the [Agile League](https://agileleague.com/)
 
 v2.2.1
 

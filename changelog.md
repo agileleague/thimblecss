@@ -8,9 +8,11 @@ Change Log
 - Remove keyframe mixin
 - Remove trailing semi-colons from core
 - Remove header class sizing
-- remove super-header for all but h1
+- Remove super-header for all but h1
 - Add reduced motion query to core
 - Add text underline class
+- Add !default to sass overrides
+- Add orange and violet colors
 - Update large media break to 1280px
 
 ## V2.14
