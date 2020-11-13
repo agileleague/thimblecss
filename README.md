@@ -1,13 +1,28 @@
 ThimbleCSS
 ==============
 
-A Simple & Responsive CSS Framework 
-Powered by [the Agile League](http://agileleague.com/)
+A nimble micro CSS Framework. 
+Powered by the [Agile League](https://agileleague.com/)
 
-v2.14
+v2.2.1
 
-Full Documentation at [ThimbleCSS](http://thimblecss.com/)
+Full Documentation at [ThimbleCSS](https://thimblecss.com/)
 
+**Install with npm**
+```
+$ npm install thimblecss
+```
+
+**Install with Yarn**
+```
+$ yarn add thimblecss
+```
+
+**Manually Compile with sass**
+
+```
+$ sass --watch thimble.scss:style.css
+```
 
 ### Featuring
 * Grid with basic alignment and ordering
@@ -19,12 +34,7 @@ That's it! No bloat or modules to override, just the basics for a fast and light
 
 ### Set up Thimble
 
-Compile thimble to your style sheet
-
-```
-sass --watch thimble.scss:style.css
-```
-
+To customize, copy the variables found in scss/_thimble-overrides.scss to a settings file in your site/app
 
 For Complete documentation, please visit [ThimbleCSS](http://thimblecss.com/)
 

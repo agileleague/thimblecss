@@ -1,6 +1,6 @@
 // Mixins
 
-// Scroll Bar Mixin
+// Style Scroll Bar 
 @mixin scrollbar($track, $bar, $width, $radius) {
   &::-webkit-scrollbar {background: $track; width:$width;}
   &::-webkit-scrollbar-thumb {background: $bar; border-radius:$radius}
@@ -11,55 +11,23 @@
   scrollbar-track-color: $track;
   scrollbar-arrow-color: $track;
   scrollbar-shadow-color: $bar;
-  scrollbar-dark-shadow-color: $bar;
+  scrollbar-dark-shadow-color: $bar
 }
 
-// Transform Mixin
-@mixin transform($trans) {
-  -ms-transform: $trans;
-  -webkit-transform: $trans;
-  transform: $trans;
-}
-
-// CSS Columns Mixin
+// CSS Mutli-columns
 @mixin columns($count, $gap) {
-  -webkit-column-count:$count;
-  -moz-column-count:$count;
   column-count:$count;
-  -webkit-column-gap:$gap;
-  -moz-column-gap:$gap;
   column-gap:$gap;
-  -webkit-column-break-inside:avoid;
-  -moz-column-break-inside:avoid;
-  -ms-column-break-inside:avoid;
-  column-break-inside:avoid;
+  break-inside:avoid
 }
 
-// Keyframe Mixins
-@mixin keyframes($animationName) {
-  @-webkit-keyframes #{$animationName} {@content;}
-  @-moz-keyframes #{$animationName} {@content;}
-  @keyframes #{$animationName} {@content;}
-};
-@mixin call-keyframes($ani...) {
-  -webkit-animation: $ani;
-  -moz-animation: $ani;
-  -ms-animation: $ani;
-  animation: $ani;
-};
-
-// Center Mixin
+// Quick XY center with flexbox
 @mixin quick-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  align-items: center
 }
 
-
-// Media Mixins
+// Media
 $small:  'only screen and (min-width: #{$small-break})';
 $medium: 'only screen and (min-width: #{$medium-break})';
 $large:  'only screen and (min-width: #{$large-break})';

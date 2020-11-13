@@ -1,44 +1,49 @@
 // ThimbleCSS Overrides
 
 // Colors
-$blue: #2266a7;
-$yellow: #FFE066;
-$red: #f15a3b;
-$green: #57a290;
-$gray:#6e7e85;
+$blue: #2266a7 !default;
+$violet: #540D6E !default; 
+$yellow: #FFE066 !default;
+$orange: #EA9643 !default;
+$red: #f15a3b !default;
+$green: #57a290 !default;
+
+$gray:#6e7e85 !default;
+$black:#181818 !default;
 
 // Typography
-$body-font: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif;
-$header-font: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif;
+$body-font: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif !default;
+$header-font: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif !default;
 
-$font-color:#616161;
-$subfont-color: rgba($font-color,.6);
+$header-color:$black !default;
+$font-color:#3d3d3d !default;
+$subfont-color: rgba($font-color,.6) !default;
 
-$link-color:$blue;
-$link-hover:$red;
+$link-color:$blue !default;
+$link-hover:$red !default;
 
 // Transitions
-$fast-speed:all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
-$normal-speed:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-$slow-speed:all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-$slowest-speed:all 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+$fast-speed:all 0.18s cubic-bezier(0.4, 0, 0.2, 1) !default;
+$normal-speed:all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !default;
+$slow-speed:all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !default;
+$slowest-speed:all 0.75s cubic-bezier(0.4, 0, 0.2, 1) !default;
 
 // Shadows
-$base-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 2px 8px rgba(0, 0, 0, 0.14);
-$hover-shadow: 0 6px 16px rgba(0, 0, 0, 0.25), 0 4px 20px rgba(0, 0, 0, 0.18);
-$selected-shadow: 0 12px 16px rgba(0, 0, 0, 0.25), 0 18px 40px rgba(0, 0, 0, 0.19);
-$solid-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+$base-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 2px 8px rgba(0, 0, 0, 0.14) !default;
+$hover-shadow: 0 6px 16px rgba(0, 0, 0, 0.25), 0 4px 20px rgba(0, 0, 0, 0.18) !default;
+$selected-shadow: 0 12px 16px rgba(0, 0, 0, 0.25), 0 18px 40px rgba(0, 0, 0, 0.19) !default;
+$solid-shadow: 3px 3px 0px rgba(0,0,0,0.2) !default;
 
 // Metrics
-$site-width:960px;
-$small-site-width:760px;
-$large-site-width:1024px;
+$site-width:960px !default;
+$small-site-width:760px !default;
+$large-site-width:1024px !default;
 
-$cell-margin:.5rem;
-$cell-padding:.5rem;
+$cell-margin:.5rem !default;
+$cell-padding:.5rem !default;
 
 // Media Break Adjustments
-$small-break:  480px;
-$medium-break: 768px;
-$large-break:  1024px;
-$xlarge-break: 1200px;
+$small-break:  480px !default;
+$medium-break: 768px !default;
+$large-break:  1024px !default;
+$xlarge-break: 1280px !default;

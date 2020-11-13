@@ -1,6 +1,19 @@
 Change Log
 ==============
 
+## V2.2.1
+- Update Sanitize. Based on https://github.com/csstools/sanitize.css/
+- Remove legacy webkit and moz prefixes
+- Remove transform mixin
+- Remove keyframe mixin
+- Remove trailing semi-colons from core
+- Remove header class sizing
+- Remove super-header for all but h1
+- Add reduced motion query to core
+- Add text underline class
+- Add !default to sass overrides
+- Add orange and violet colors
+- Update large media break to 1280px
 
 ## V2.14
 - Fix mixins typo for large-down media query
