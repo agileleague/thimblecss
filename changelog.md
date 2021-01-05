@@ -1,6 +1,10 @@
 Change Log
 ==============
 
+## V2.2.2
+- Add $line-height variable to overrides
+- Use $line-height to apply margin-bottom to headers in rem
+
 ## V2.2.1
 - Update Sanitize. Based on https://github.com/csstools/sanitize.css/
 - Remove legacy webkit and moz prefixes

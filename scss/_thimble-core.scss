@@ -1,4 +1,4 @@
-// ThimbleCSS Core v2.2.1
+// ThimbleCSS Core v2.2.2
 
 // Sanitize
 *, *::before, *::after {
@@ -17,7 +17,7 @@ html {
   -webkit-tap-highlight-color:transparent;
   -moz-osx-font-smoothing:grayscale;
   -webkit-font-smoothing:subpixel-antialiased;
-  line-height:1.45;
+  line-height:$line-height;
 }
 body {
   margin:0;
@@ -82,7 +82,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight:normal;
   text-rendering:optimizeLegibility;
   font-size:inherit;
-  color:$header-color
+  color:$header-color;
+  margin-bottom: $line-height + rem;
 }
 h1.super-header {font-size:5.653rem;line-height:1.18}
 h1 {font-size:3.998rem;line-height:1.22}
