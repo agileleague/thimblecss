@@ -1,6 +1,9 @@
 Change Log
 ==============
 
+## V2.2.3
+- Add responsive heading sizes
+
 ## V2.2.2
 - Add $line-height variable to overrides
 - Use $line-height to apply margin-bottom to headers in rem

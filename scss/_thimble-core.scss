@@ -1,4 +1,4 @@
-// ThimbleCSS Core v2.2.2
+// ThimbleCSS Core v2.2.3
 
 // Sanitize
 *, *::before, *::after {
@@ -76,7 +76,7 @@ sub, .sub {bottom:-.25em}
   overflow:hidden
 }
 
-// Headers
+// Headings
 h1, h2, h3, h4, h5, h6 {
   font-family:$header-font;
   font-weight:normal;
@@ -85,13 +85,23 @@ h1, h2, h3, h4, h5, h6 {
   color:$header-color;
   margin-bottom: $line-height + rem;
 }
-h1.super-header {font-size:5.653rem;line-height:1.18}
-h1 {font-size:3.998rem;line-height:1.22}
-h2 {font-size:2.827rem;line-height:1.4}
-h3 {font-size:1.999rem;line-height:1.55}
-h4 {font-size:1.414rem;line-height:1.7}
-h5 {font-size:1rem;line-height:1.85}
+h1.super-header {font-size:3.998rem;line-height:1.22}
+h1 {font-size:2.827rem;line-height:1.4}
+h2 {font-size:1.999rem;line-height:1.55}
+h3 {font-size:1.414rem;line-height:1.7}
+h4 {font-size:1rem;line-height:1.85}
+h5 {font-size: .707rem;line-height:2}
 h6 {font-size: .707rem;line-height:2}
+
+@media #{$medium} {
+  h1.super-header {font-size:5.653rem;line-height:1.18}
+  h1 {font-size:3.998rem;line-height:1.22}
+  h2 {font-size:2.827rem;line-height:1.4}
+  h3 {font-size:1.999rem;line-height:1.55}
+  h4 {font-size:1.414rem;line-height:1.7}
+  h5 {font-size:1rem;line-height:1.85}
+}
+
 .sub-header {color:$subfont-color}
 
 .super-header.vw {font-size:7vw}
