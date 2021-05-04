@@ -1,4 +1,4 @@
-// ThimbleCSS Core v2.2.3
+// ThimbleCSS Core v2.2.4
 
 // Sanitize
 *, *::before, *::after {
@@ -308,12 +308,26 @@ $cell-sizes:  (
     }
   }
 
+  // Create Responsive fit/fills
+  .#{$size}fit {
+    flex:0 0 auto;
+    width:auto;
+    max-width:auto;
+  }
+  .#{$size}fill {
+    flex:1 1 0;
+    width:auto;
+    max-width:auto;
+  }
+
 }
 
 // Cells
 .cell {
   flex:1 1 auto;
   max-width:100%;
+  min-width:0;
+  min-height:0;
   margin-left:$cell-margin;
   margin-right:$cell-margin;
   padding-left:$cell-padding;
