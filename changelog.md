@@ -1,6 +1,9 @@
 Change Log
 ==============
 
+## V2.2.5
+- add xlarge container size
+
 ## V2.2.4
 - add responsive fit and fill classes
 - add back in min-height and min-width to cell base class
