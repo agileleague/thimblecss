@@ -1,4 +1,4 @@
-// ThimbleCSS Core v2.2.5
+// ThimbleCSS Core v2.2.6
 
 // Sanitize
 *, *::before, *::after {
@@ -215,10 +215,6 @@ svg:not(:root) {
   width:100vw
 }
 
-// Show/Hide utility
-.hide, .xlarge-hide {display:none!important}
-.small-show, .medium-show, .large-show, .xlarge-show {display:none}
-
 // Grid
 .grid {
 	position:relative;
@@ -231,6 +227,14 @@ svg:not(:root) {
       padding-left:0;
       padding-right:0
     }
+  }
+  &.edge {
+    margin-left:-($cell-margin+$cell-padding);
+    margin-right:-($cell-margin+$cell-padding);
+  }
+  &.half-edge {
+    margin-left:-$cell-margin;
+    margin-right:-$cell-margin;
   }
 }
 .nowrap {flex-wrap:nowrap}
@@ -281,7 +285,6 @@ $cell-sizes:  (
 @mixin sizing($size) {
   // Visibilty
   .#{$size}hide {display:none!important}
-  .#{$size}show {display:inherit!important}
 
   // Typography
   .#{$size}text-left {text-align:left}
@@ -324,7 +327,10 @@ $cell-sizes:  (
     width:auto;
     max-width:auto;
   }
+}
 
+@mixin sizing-down($size) {
+  .#{$size}show {display:none!important}
 }
 
 // Cells
@@ -358,10 +364,16 @@ $cell-sizes:  (
 @include sizing(null);
 
 // Media Queries
+@media #{$small-down} {
+  @include sizing-down(small-);
+}
 @media #{$small} {
   @include sizing(small-);
 }
 
+@media #{$medium-down} {
+  @include sizing-down(medium-);
+}
 @media #{$medium} {
   @include sizing(medium-);
 
@@ -374,10 +386,16 @@ $cell-sizes:  (
   h5.vw {font-size:1.5vw}
 }
 
+@media #{$large-down} {
+  @include sizing-down(large-);
+}
 @media #{$large} {
   @include sizing(large-)
 }
 
+@media #{$xlarge-down} {
+  @include sizing-down(xlarge-);
+}
 @media #{$xlarge} {
   @include sizing(xlarge-)
 }

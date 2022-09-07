@@ -1,6 +1,11 @@
 Change Log
 ==============
 
+## V2.2.6
+- add edge and half-edge classes to grid
+- rework visibility utility to remove display inherit
+- add sizing-down mixin
+
 ## V2.2.5
 - add xlarge container size
 

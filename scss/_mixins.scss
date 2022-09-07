@@ -2,9 +2,9 @@
 
 // Style Scroll Bar 
 @mixin scrollbar($track, $bar, $width, $radius) {
-  &::-webkit-scrollbar {background: $track; width:$width;}
+  &::-webkit-scrollbar {background: $track; width:$width}
   &::-webkit-scrollbar-thumb {background: $bar; border-radius:$radius}
-  &::-webkit-scrollbar-corner {background: $track;}
+  &::-webkit-scrollbar-corner {background: $track}
   scrollbar-base-color: $bar;
   scrollbar-3dlight-color: $bar;
   scrollbar-highlight-color: $bar;
