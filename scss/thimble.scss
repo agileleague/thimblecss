@@ -1,5 +1,5 @@
-// ThimbleCSS v2.2.6
+// ThimbleCSS v3.0.0
 
-@import 'thimble-overrides';
-@import 'mixins';
-@import 'thimble-core';
+@forward 'thimble-overrides';
+@forward 'mixins';
+@forward 'thimble-core';

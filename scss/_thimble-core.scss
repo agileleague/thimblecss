@@ -1,3 +1,6 @@
+@use 'thimblecss/thimble-overrides' as *;
+@use 'thimblecss/mixins' as *;
+
 // ThimbleCSS Core v2.2.6
 
 // Sanitize
@@ -10,19 +13,22 @@
   vertical-align: inherit;
 }
 html {
-  -ms-text-size-adjust:100%;
-  -webkit-text-size-adjust:100%;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
   -moz-tab-size: 4;
   tab-size: 4;
   -webkit-tap-highlight-color:transparent;
   -moz-osx-font-smoothing:grayscale;
   -webkit-font-smoothing:subpixel-antialiased;
-  line-height:$line-height;
+  
 }
 body {
   margin:0;
+  min-height:100vh;
   font-family:$body-font;
   color:$font-color;
+  line-height:$line-height;
 }
 hr {
   color: inherit; 
@@ -34,7 +40,11 @@ pre {
   font-size: 1em;
   overflow: auto
 }
-h1, h2, h3, h4, h5, h6, p, blockquote, figure, ol, ul {margin:0;padding:0}
+h1, h2, h3, h4, h5, h6, p, blockquote, figure, ol, ul {margin:0;padding:0;margin-block-end: 0;}
+
+input, button, textarea, select {font: inherit;}
+
+:target {scroll-margin-block: 5ex;}
 
 // typography
 ::selection {background-color:$green;color:#fff}
@@ -81,6 +91,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family:$header-font;
   font-weight:normal;
   text-rendering:optimizeLegibility;
+  text-wrap: balance;
   font-size:inherit;
   color:$header-color;
   margin-bottom: $line-height + rem;
@@ -102,7 +113,7 @@ h6 {font-size: .707rem;line-height:2}
   h5 {font-size:1rem;line-height:1.85}
 }
 
-.sub-header {color:$subfont-color}
+.sub-header,.sub-font {color:$subfont-color}
 
 .super-header.vw {font-size:7vw}
 h1.vw {font-size:6vw}
