@@ -1,6 +1,9 @@
 Change Log
 ==============
 
+## V2.3.0
+- remove legacy precompiled css file
+
 ## V2.2.6
 - add edge and half-edge classes to grid
 - rework visibility utility to remove display inherit

@@ -4,7 +4,7 @@ ThimbleCSS
 A nimble micro CSS Framework. 
 Powered by the [Agile League](https://agileleague.com/)
 
-v2.2.6
+v2.3.0
 
 Full Documentation at [ThimbleCSS](https://thimblecss.com/)
 
