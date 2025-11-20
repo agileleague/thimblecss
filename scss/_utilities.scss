@@ -1,0 +1,50 @@
+@use 'config' as *;
+@if $include-utilities {
+
+// Utility Classes
+
+// Display 
+.block { display: block !important; }
+.inline { display: inline !important; }
+.inline-block { display: inline-block !important; }
+.flex { display: flex !important; }
+
+// Position
+.relative { position: relative !important; }
+.absolute { position: absolute !important; }
+.fixed { position: fixed !important; }
+.sticky { position: sticky !important; }
+
+// Overflow
+.overflow-hidden { overflow: hidden !important; }
+.overflow-auto { overflow: auto !important; }
+.overflow-scroll { overflow: scroll !important; }
+
+// Border radius
+.rounded-small { border-radius: var(--radius-small, 4px) !important; }
+.rounded-medium { border-radius: var(--radius-medium, 8px) !important; }
+.rounded-large { border-radius: var(--radius-large, 12px) !important; }
+.rounded-full { border-radius: 50% !important; }
+
+// Shadow
+.shadow { box-shadow: var(--base-shadow) !important; }
+.shadow-hover { box-shadow: var(--hover-shadow) !important; }
+.shadow-selected { box-shadow: var(--selected-shadow) !important; }
+.shadow-solid { box-shadow: var(--solid-shadow) !important; }
+.shadow-none { box-shadow: none !important; }
+
+// Text Color
+.text-green { color: var(--green) !important; }
+.text-blue { color: var(--blue) !important; }
+.text-violet { color: var(--violet) !important; }
+.text-red { color: var(--red) !important; }
+.text-orange { color: var(--orange) !important; }
+.text-yellow { color: var(--yellow) !important; }
+
+.text-pearl { color: var(--pearl) !important; }
+.text-black { color: var(--black) !important; }
+.text-white { color: var(--white) !important; }
+.text-jet { color: var(--jet) !important; }
+.text-gray { color: var(--gray) !important; }
+
+} // end if $include-utilities

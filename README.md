@@ -1,44 +1,42 @@
-ThimbleCSS
-==============
+# ThimbleCSS
 
-A nimble micro CSS Framework. 
-Powered by the [Agile League](https://agileleague.com/)
+**ThimbleCSS** is a lightweight, modern SCSS micro-framework.  
+It provides a minimal baseline for typography, layout, utilities, and design tokens—without imposing a full design system or component library.
 
-v2.3.0
+Thimble is intended to be **imported into your own SCSS pipeline**, not consumed as a precompiled CSS file.
 
-Full Documentation at [ThimbleCSS](https://thimblecss.com/)
+---
 
-**Install with npm**
+## Features
+
+- Modular SCSS architecture  
+- Configurable variables, breakpoints, and color system  
+- Utility classes for grids, spacing, media, and typography  
+- Small surface area, easy to override  
+- No runtime dependencies
+
+---
+
+## Installation
+
+```bash
+npm install thimblecss
 ```
-$ npm install thimblecss
+
+## Usage
+
+``` SCSS
+@use "thimblecss" as *;
+
+// OR customize variables and modules before import:
+
+@use "thimblecss" with (
+  $small-break: 600px,
+  $medium-break: 900px,
+  $large-break: 1200px,
+  $xlarge-break: 1400px
+);
 ```
 
-**Install with Yarn**
-```
-$ yarn add thimblecss
-```
-
-**Manually Compile with sass**
-
-```
-$ sass --watch thimble.scss:style.css
-```
-
-### Featuring
-* Grid with basic alignment and ordering
-* Basic typography styles
-* Simple media containers
-
-That's it! No bloat or modules to override, just the basics for a fast and lightweight build.
-
-
-### Set up Thimble
-
-To customize, copy the variables found in scss/_thimble-overrides.scss to a settings file in your site/app
-
-For Complete documentation, please visit [ThimbleCSS](http://thimblecss.com/)
-
-
-### License
-
-Licensed under the [MIT LIcense](http://opensource.org/licenses/MIT)
+## Documentation
+Full documentation, examples, and guidance are available at: [ThimbleCSS](https://thimblecss.com/)

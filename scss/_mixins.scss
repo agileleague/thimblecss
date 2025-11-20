@@ -1,3 +1,5 @@
+@use 'config' as bp;
+
 // Mixins
 
 // Style Scroll Bar 
@@ -28,12 +30,12 @@
 }
 
 // Media
-$small:  'only screen and (min-width: #{$small-break})';
-$medium: 'only screen and (min-width: #{$medium-break})';
-$large:  'only screen and (min-width: #{$large-break})';
-$xlarge: 'only screen and (min-width: #{$xlarge-break})';
+$small:  'only screen and (min-width: #{bp.$small-break})';
+$medium: 'only screen and (min-width: #{bp.$medium-break})';
+$large:  'only screen and (min-width: #{bp.$large-break})';
+$xlarge: 'only screen and (min-width: #{bp.$xlarge-break})';
 
-$small-down:  'only screen and (max-width: #{$small-break - 1px})';
-$medium-down: 'only screen and (max-width: #{$medium-break - 1px})';
-$large-down:  'only screen and (max-width: #{$large-break - 1px})';
-$xlarge-down: 'only screen and (max-width: #{$xlarge-break - 1px})';
+$small-down:  'only screen and (max-width: #{bp.$small-break - 1px})';
+$medium-down: 'only screen and (max-width: #{bp.$medium-break - 1px})';
+$large-down:  'only screen and (max-width: #{bp.$large-break - 1px})';
+$xlarge-down: 'only screen and (max-width: #{bp.$xlarge-break - 1px})';

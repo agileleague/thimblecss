@@ -1,0 +1,48 @@
+:root {
+    --mix-white-20: 46%;
+    --mix-white-10: 24%;
+    --mix-black-10: 20%;
+    --mix-black-20: 40%;
+
+    // Green    
+    --green-l1: color-mix(in oklch, var(--green), white var(--mix-white-10));
+    --green-l2: color-mix(in oklch, var(--green), white var(--mix-white-20));
+    --green-d1: color-mix(in oklch, var(--green), black var(--mix-black-10));
+    --green-d2: color-mix(in oklch, var(--green), black var(--mix-black-20));
+
+    // Blue
+    --blue-l1: color-mix(in oklch, var(--blue), white var(--mix-white-10));
+    --blue-l2: color-mix(in oklch, var(--blue), white var(--mix-white-20));
+    --blue-d1: color-mix(in oklch, var(--blue), black var(--mix-black-10));
+    --blue-d2: color-mix(in oklch, var(--blue), black var(--mix-black-20));
+
+    // Violet
+    --violet-l1: color-mix(in oklch, var(--violet), white var(--mix-white-10));
+    --violet-l2: color-mix(in oklch, var(--violet), white var(--mix-white-20));
+    --violet-d1: color-mix(in oklch, var(--violet), black var(--mix-black-10));
+    --violet-d2: color-mix(in oklch, var(--violet), black var(--mix-black-20));
+
+     // Red
+    --red-l1: color-mix(in oklch, var(--red), white var(--mix-white-10));
+    --red-l2: color-mix(in oklch, var(--red), white var(--mix-white-20));
+    --red-d1: color-mix(in oklch, var(--red), black var(--mix-black-10));
+    --red-d2: color-mix(in oklch, var(--red), black var(--mix-black-20));
+
+    // Orange
+    --orange-l1: color-mix(in oklch, var(--orange), white var(--mix-white-10));
+    --orange-l2: color-mix(in oklch, var(--orange), white var(--mix-white-20));
+    --orange-d1: color-mix(in oklch, var(--orange), black 10%);
+    --orange-d2: color-mix(in oklch, var(--orange), black 25%);
+
+    // Yellow
+    --yellow-l1: color-mix(in oklch, var(--yellow), white var(--mix-white-10));
+    --yellow-l2: color-mix(in oklch, var(--yellow), white var(--mix-white-20));
+    --yellow-d1: color-mix(in oklch, var(--yellow), black 10%);
+    --yellow-d2: color-mix(in oklch, var(--yellow), black 20%);
+
+    // Gray
+    --gray-l1: color-mix(in oklch, var(--gray), white var(--mix-white-10));
+    --gray-l2: color-mix(in oklch, var(--gray), white var(--mix-white-20));
+    --gray-d1: color-mix(in oklch, var(--gray), black var(--mix-black-10));
+    --gray-d2: color-mix(in oklch, var(--gray), black var(--mix-black-20)); 
+}

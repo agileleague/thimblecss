@@ -1,110 +1,126 @@
-// ThimbleCSS Core v2.2.6
+@use 'thimble-overrides' as *;
+@use 'mixins' as *;
+
+// ThimbleCSS Core v3.0.0
 
 // Sanitize
 *, *::before, *::after {
-  box-sizing:border-box;
+    box-sizing:border-box;
 }
 ::before,
 ::after {
-  text-decoration: inherit; 
-  vertical-align: inherit;
+    text-decoration: inherit; 
+    vertical-align: inherit;
 }
 html {
-  -ms-text-size-adjust:100%;
-  -webkit-text-size-adjust:100%;
-  -moz-tab-size: 4;
-  tab-size: 4;
-  -webkit-tap-highlight-color:transparent;
-  -moz-osx-font-smoothing:grayscale;
-  -webkit-font-smoothing:subpixel-antialiased;
-  line-height:$line-height;
+    -ms-text-size-adjust:100%;
+    -webkit-text-size-adjust:100%;
+    -moz-tab-size: 4;
+    tab-size: 4;
+    -webkit-tap-highlight-color:transparent;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:subpixel-antialiased;
+    line-height:var(--line-height);
 }
 body {
-  margin:0;
-  font-family:$body-font;
-  color:$font-color;
+    margin:0;
+    font-family:var(--primary-font);
+    color:var(--font-color);
+    background-color:var(--background-color);
 }
 hr {
-  color: inherit; 
-  height: 0;
+    color: inherit; 
+    height: 0;
 }
 main {display:block}
 pre {
-  font-family: monospace, monospace;
-  font-size: 1em;
-  overflow: auto
+    font-family: monospace, monospace;
+    font-size: 1em;
+    overflow: auto
 }
 h1, h2, h3, h4, h5, h6, p, blockquote, figure, ol, ul {margin:0;padding:0}
 
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+}
+button, [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
 // typography
-::selection {background-color:$green;color:#fff}
+::selection {background-color:var(--green);color:#fff}
 :focus {outline:0}
 p {
-  margin-bottom:1.1rem;
-  text-rendering:optimizeLegibility
+    margin-bottom:1.1rem;
+    text-rendering:optimizeLegibility
 }
 em, i, .em {
-  font-style:italic;
-  line-height:inherit
+    font-style:italic;
+    line-height:inherit
 }
 .uppercase {text-transform:uppercase}
 .capitalize {text-transform:capitalize}
 .lowercase {text-transform:lowercase}
 .underline {text-decoration:underline}
 strong, b, .strong {
-  font-weight:bolder;
-  line-height:inherit
+    font-weight:bolder;
+    line-height:inherit
 }
 small, .small {font-size:80%}
 .large {font-size:140%}
 sup, .sup, sub, .sub {
-  position:relative;
-  font-size:75%;
-  line-height:0;
-  vertical-align:baseline
+    position:relative;
+    font-size:75%;
+    line-height:0;
+    vertical-align:baseline
 }
 sup, .sup {top:-.5em}
 sub, .sub {bottom:-.25em}
 .ellipsis, .ellipsis li {
-  text-overflow:ellipsis;
-  white-space:nowrap;
-  overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden
 }
 .text-clip, .text-clip li {
-  text-overflow:clip;
-  white-space:nowrap;
-  overflow:hidden
+    text-overflow:clip;
+    white-space:nowrap;
+    overflow:hidden
 }
 
 // Headings
 h1, h2, h3, h4, h5, h6 {
-  font-family:$header-font;
-  font-weight:normal;
-  text-rendering:optimizeLegibility;
-  font-size:inherit;
-  color:$header-color;
-  margin-bottom: $line-height + rem;
+    font-family:var(--primary-font);
+    font-weight:normal;
+    text-rendering:optimizeLegibility;
+    font-size:inherit;
+    color:var(--header-color);
+    margin-bottom: calc(var(--line-height) * 1rem)
 }
-h1.super-header {font-size:3.998rem;line-height:1.22}
-h1 {font-size:2.827rem;line-height:1.4}
-h2 {font-size:1.999rem;line-height:1.55}
-h3 {font-size:1.414rem;line-height:1.7}
-h4 {font-size:1rem;line-height:1.85}
-h5 {font-size: .707rem;line-height:2}
-h6 {font-size: .707rem;line-height:2}
+h1.super-heading {font-size:4.769rem;line-height:1.22}
+h1 {font-size:3.052rem;line-height:1.4}
+h2 {font-size:2.441rem;line-height:1.55}
+h3 {font-size:1.953rem;line-height:1.7}
+h4 {font-size:1.563rem;line-height:1.85}
+h5 {font-size: 1.25rem;line-height:2}
+h6 {font-size: 1rem;line-height:2}
 
 @media #{$medium} {
-  h1.super-header {font-size:5.653rem;line-height:1.18}
-  h1 {font-size:3.998rem;line-height:1.22}
-  h2 {font-size:2.827rem;line-height:1.4}
-  h3 {font-size:1.999rem;line-height:1.55}
-  h4 {font-size:1.414rem;line-height:1.7}
-  h5 {font-size:1rem;line-height:1.85}
+    h1.super-heading {font-size:5.961rem;line-height:1.18}
+    h1 {font-size:3.815rem;line-height:1.22}
+    h2 {font-size:3.052rem;line-height:1.4}
+    h3 {font-size:2.441rem;line-height:1.55}
+    h4 {font-size:1.953rem;line-height:1.7}
+    h5 {font-size:1.563rem;line-height:1.85}
+    h6 {font-size:1.25rem}
 }
 
-.sub-header {color:$subfont-color}
+.sub-heading {color:var(--subfont-color)}
 
-.super-header.vw {font-size:7vw}
+.super-heading.vw {font-size:7vw}
 h1.vw {font-size:6vw}
 h2.vw {font-size:5vw}
 h3.vw {font-size:4.5vw}
@@ -114,13 +130,20 @@ h6.vw {font-size:3vw}
 
 // Links
 a {
-	text-decoration:none;
-	transition:$normal-speed;
-	color:$link-color;
-  cursor:pointer;
-  &:active, &:hover {
-    color:$link-hover;
-  }
+	transition:var(--normal-speed);
+	color:var(--link-color);
+    cursor:pointer;
+    &:not(.button):active, &:not(.button):hover {
+        color:var(--link-hover)
+    }
+    &.plain {
+        color:inherit;
+        text-decoration: none;
+        &:active, &:hover {
+            color:inherit;
+            text-decoration:underline;
+        }
+    }
 }
 
 // Floats & Clears
@@ -132,110 +155,95 @@ a {
 
 // Lists
 ul, ol, dl {
-  list-style-position:outside;
-  margin-bottom:1.15rem;
-  ul, ol, dl {
-    margin-bottom:0
-  }
+    list-style-position:outside;
+    margin-bottom:1.15rem;
+    ul, ol, dl {
+        margin-bottom:0
+    }
 }
 ul {
-  margin-left:1.2rem;
-  list-style-type:disc;
-  ul {
-    list-style-type:circle
-  }
-  &.lined, &.none {
-    list-style-type:none;
-    margin-left:0
-  }
-  &.lined li {
-    border-bottom:solid 1px rgba(0,0,0,0.2)
-  }
+    margin-left:1.2rem;
+    list-style-type:disc;
+    ul {
+        list-style-type:circle
+    }
+    &.lined, &.none {
+        list-style-type:none;
+        margin-left:0
+    }
+    &.lined li {
+        border-bottom:solid 1px var(--subfont-color);
+        &:last-child {
+            border-bottom:none
+        }
+    }
 }
 ol {
-  margin-left:1.55rem;
-  list-style-type:decimal
+    margin-left:1.55rem;
+    list-style-type:decimal
 }
 
 // Media
-img, iframe {
-  max-width:100%;
-  height:auto;
-  border:0;
-  border-style:none
+img, iframe, canvas, video, picture {
+    max-width:100%;
+    width: 100%;
+    border:0;
+    border-style:none
 }
-svg:not(:root) {
-  overflow:hidden
-}
-.video-container {
-	position:relative;
-	padding-bottom:56.25%;
-	height:0;
-	overflow:hidden;
-  iframe, object, embed, video {
-  	position:absolute;
-  	top:0;
-  	left:0;
-  	width:100%;
-  	height:100%
-  }
-}
+img, picture {height: auto}
 
-// Center container
-.container {
-  margin:0 auto;
-	max-width:$site-width;
-	width:100%
+svg:not(:root) {overflow:hidden}
+
+// Aspect Rations for Media
+.aspect-16-9 {aspect-ratio:16 / 9}
+.aspect-4-3 {aspect-ratio:4 / 3}
+.aspect-1-1, .aspect-square {aspect-ratio:1 / 1}
+
+// Containers
+[class*="container-"] {
+    width:100%;
+    margin:0 auto
 }
-.small-container {
-  margin:0 auto;
-	max-width:$small-site-width;
-	width:100%
-}
-.large-container {
-  margin:0 auto;
-	max-width:$large-site-width;
-	width:100%
-}
-.xlarge-container {
-  margin:0 auto;
-	max-width:$xlarge-site-width;
-	width:100%
-}
+.container-small {max-width:var(--container-small)}
+.container-medium {max-width:var(--container-medium)}
+.container-large {max-width:var(--container-large)}
+.container-xlarge {max-width:var(--container-xlarge)}
+.container-xxlarge {max-width:var(--container-xxlarge)}
+
 .align-wide {
-  margin-left: calc(25% - 25vw);
-  margin-right: calc(25% - 25vw);
-  width: auto;
-  max-width:100vw
+    margin-left: calc(25% - 25vw);
+    margin-right: calc(25% - 25vw);
+    width: auto;
+    max-width:100vw
 }
 .align-full {
-  margin-left: calc( -50vw + 50% );
-  margin-right: calc( -50vw + 50% );
-  max-width: 100vw;
-  width:100vw
+    margin-left: calc( -50vw + 50% );
+    margin-right: calc( -50vw + 50% );
+    max-width: 100vw;
+    width:100vw
 }
 
 // Grid
 .grid {
 	position:relative;
-  display:flex;
-  -webkit-backface-visibility:hidden;
-  backface-visibility:hidden;
-  flex-flow:row wrap;
-  &.collapse-padding {
-    > .cell {
-      padding-left:0;
-      padding-right:0
+    display:flex;
+    -webkit-backface-visibility:hidden;
+    backface-visibility:hidden;
+    flex-flow:row wrap;
+    &.collapse-padding {
+        > .cell {
+            padding-left:0;
+            padding-right:0
+        }
     }
-  }
-  &.edge {
-    margin-left:-($cell-margin+$cell-padding);
-    margin-right:-($cell-margin+$cell-padding);
-  }
-  &.half-edge {
-    margin-left:-$cell-margin;
-    margin-right:-$cell-margin;
-  }
+    &.edge {
+        margin-left: calc(0px - var(--cell-margin) - var(--cell-padding));
+        margin-right: calc(0px - var(--cell-margin) - var(--cell-padding));
+    }
+    &.half-edge {
+        margin-left: calc(0px - var(--cell-margin));
+        margin-right: calc(0px - var(--cell-margin));
+    }
 }
 .nowrap {flex-wrap:nowrap}
 .wrap-reverse {flex-wrap:wrap-reverse}
@@ -257,158 +265,165 @@ svg:not(:root) {
 // Grid Direction
 .reverse {flex-direction:row-reverse}
 .vertical {
-  flex-direction:column;
-  flex-wrap:nowrap;
-  &.reverse {
-    flex-direction:column-reverse;
-    flex-wrap:nowrap
-  }
+    flex-direction:column;
+    flex-wrap:nowrap;
+    &.reverse {
+        flex-direction:column-reverse;
+        flex-wrap:nowrap
+    }
 }
 
 // Functions
-$celladjust:$cell-margin*2;
+$celladjust:calc(var(--cell-margin) * 2);
 $cell-sizes:  (
-  (twelve, 12),
-  (eleven, 11),
-  (ten, 10),
-  (nine, 9),
-  (eight, 8),
-  (seven, 7),
-  (six, 6),
-  (five, 5),
-  (four, 4),
-  (three, 3),
-  (two, 2),
-  (one, 1)
+    (twelve, 12),
+    (eleven, 11),
+    (ten, 10),
+    (nine, 9),
+    (eight, 8),
+    (seven, 7),
+    (six, 6),
+    (five, 5),
+    (four, 4),
+    (three, 3),
+    (two, 2),
+    (one, 1)
 );
 
 @mixin sizing($size) {
-  // Visibilty
-  .#{$size}hide {display:none!important}
+    // Visibilty
+    .#{$size}hide {display:none!important}
 
-  // Typography
-  .#{$size}text-left {text-align:left}
-  .#{$size}text-right {text-align:right}
-  .#{$size}text-center {text-align:center}
-  .#{$size}text-justify {text-align:justify}
+    // Typography
+    .#{$size}text-left {text-align:left}
+    .#{$size}text-right {text-align:right}
+    .#{$size}text-center {text-align:center}
+    .#{$size}text-justify {text-align:justify}
 
-  @each $size-text, $size-int in $cell-sizes {
-    // Create Cell Sizes
-    .#{$size}#{$size-text} {
-      max-width:calc( 100%/12 * #{$size-int} - #{$celladjust} );
-      flex: 0 0 calc( 100%/12 * #{$size-int} - #{$celladjust} );
-      &.collapse {
-        max-width:calc( 100%/12 * #{$size-int} );
-        flex: 0 0 calc( 100%/12 * #{$size-int} )
-      }
+    @each $size-text, $size-int in $cell-sizes {
+        // Create Cell Sizes
+        .#{$size}#{$size-text} {
+            max-width:calc( 100%/12 * #{$size-int} - #{$celladjust} );
+            flex: 0 0 calc( 100%/12 * #{$size-int} - #{$celladjust} );
+            &.collapse {
+                max-width:calc( 100%/12 * #{$size-int} );
+                flex: 0 0 calc( 100%/12 * #{$size-int} )
+            }
+        }
+
+        // Create Cell ordering
+        .#{$size}order-#{$size-int}  {order:#{$size-int}}
     }
 
-    // Create Cell ordering
-    .#{$size}order-#{$size-int}  {order:#{$size-int}}
-  }
-
-  .#{$size}fifth {
-    max-width:calc( 20% - #{$celladjust} );
-    flex: 0 0 calc( 20% - #{$celladjust} );
-    &.collapse {
-      max-width:20%;
-      flex: 0 0 20%
+    .#{$size}fifth {
+        max-width:calc( 20% - #{$celladjust} );
+        flex: 0 0 calc( 20% - #{$celladjust} );
+        &.collapse {
+            max-width:20%;
+            flex: 0 0 20%
+        }
     }
-  }
 
-  // Create Responsive fit/fills
-  .#{$size}fit {
-    flex:0 0 auto;
-    width:auto;
-    max-width:auto;
-  }
-  .#{$size}fill {
-    flex:1 1 0;
-    width:auto;
-    max-width:auto;
-  }
+    // Create Responsive fit/fills
+    .#{$size}fit {
+        flex:0 0 auto;
+        width:auto;
+        max-width:auto;
+    }
+    .#{$size}fill {
+        flex:1 1 0;
+        width:auto;
+        max-width:auto;
+    }
 }
 
 @mixin sizing-down($size) {
-  .#{$size}show {display:none!important}
+    .#{$size}show {display:none!important}
 }
 
 // Cells
 .cell {
-  flex:1 1 auto;
-  max-width:100%;
-  min-width:0;
-  min-height:0;
-  margin-left:$cell-margin;
-  margin-right:$cell-margin;
-  padding-left:$cell-padding;
-  padding-right:$cell-padding;
-  &.fit {
-    flex:0 0 auto;
-    width:auto
-  }
-  &.fill {
-    flex:1 1;
-    width:auto
-  }
-  &.collapse {
-    margin-left:0;
-    margin-right:0
-  }
-  &.collapse-padding {
-    padding-left:0;
-    padding-right:0
-  }
+    flex:1 1 auto;
+    max-width:100%;
+    min-width:0;
+    min-height:0;
+    margin-left:var(--cell-margin);
+    margin-right:var(--cell-margin);
+    padding-left:var(--cell-padding);
+    padding-right:var(--cell-padding);
+    &.fit {
+        flex:0 0 auto;
+        width:auto
+    }
+    &.fill {
+        flex:1 1;
+        width:auto
+    }
+    &.collapse {
+        margin-left:0;
+        margin-right:0
+    }
+    &.collapse-padding {
+        padding-left:0;
+        padding-right:0
+    }
 }
 
 @include sizing(null);
 
 // Media Queries
 @media #{$small-down} {
-  @include sizing-down(small-);
+    @include sizing-down(small-);
 }
 @media #{$small} {
-  @include sizing(small-);
+    @include sizing(small-);
 }
 
 @media #{$medium-down} {
-  @include sizing-down(medium-);
+    @include sizing-down(medium-);
 }
 @media #{$medium} {
-  @include sizing(medium-);
+    @include sizing(medium-);
 
-  // VW Headers
-  .super-header.vw {font-size:5vw}
-  h1.vw {font-size:3.5vw}
-  h2.vw {font-size:3vw}
-  h3.vw {font-size:2.5vw}
-  h4.vw {font-size:2vw}
-  h5.vw {font-size:1.5vw}
+    // VW Headers
+    .super-heading.vw {font-size:5vw}
+    h1.vw {font-size:3.5vw}
+    h2.vw {font-size:3vw}
+    h3.vw {font-size:2.5vw}
+    h4.vw {font-size:2vw}
+    h5.vw {font-size:1.5vw}
 }
 
 @media #{$large-down} {
-  @include sizing-down(large-);
+    @include sizing-down(large-);
 }
 @media #{$large} {
-  @include sizing(large-)
+    @include sizing(large-)
 }
 
 @media #{$xlarge-down} {
-  @include sizing-down(xlarge-);
+    @include sizing-down(xlarge-);
 }
 @media #{$xlarge} {
-  @include sizing(xlarge-)
+    @include sizing(xlarge-)
 }
 
 // Reduced Motion
 @media (prefers-reduced-motion: reduce) {
-  *, ::before, ::after {
-    animation-delay: -1ms !important;
-    animation-duration: 1ms !important;
-    animation-iteration-count: 1 !important;
-    background-attachment: initial !important;
-    scroll-behavior: auto !important;
-    transition-delay: 0s !important;
-    transition-duration: 0s !important
-  }
+    *, ::before, ::after {
+        animation-delay: -1ms !important;
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        background-attachment: initial !important;
+        scroll-behavior: auto !important;
+        transition-delay: 0s !important;
+        transition-duration: 0s !important
+    }
+}
+
+// Respect transparency preferences
+@media (prefers-reduced-transparency: reduce) {
+    * {
+        backdrop-filter: none !important;
+    }
 }

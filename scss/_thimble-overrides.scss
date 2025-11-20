@@ -1,52 +1,80 @@
 // ThimbleCSS Overrides
 
-// Colors
-$blue: #2266a7 !default;
-$violet: #540D6E !default; 
-$yellow: #FFE066 !default;
-$orange: #EA9643 !default;
-$red: #f15a3b !default;
-$green: #57a290 !default;
+:root {
+    // Set up for automatic dark mode support
+    color-scheme: light dark;
 
-$gray:#6e7e85 !default;
-$black:#181818 !default;
+    // Colors
+    --green: #6F8D6A;
+    --blue: #2D5283;
+    --violet: #9E4770; 
+    --red: #E54013;
+    --orange: #F45D01;
+    --yellow: #E3BD33;
 
-// Typography
-$body-font: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif !default;
-$header-font: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif !default;
+    --pearl: #e7dbbf;
+    --black: #1c1b22;
+    --white: #ffffff;
+    --jet: #433e3c;
+    --gray: #6e7e85;
 
-$line-height:1.5;
+    --background-color: light-dark(white, var(--black));
 
-$header-color:$black !default;
-$font-color:#3d3d3d !default;
-$subfont-color: rgba($font-color,.6) !default;
+    // Typography
+    --primary-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
+    --line-height: 1.5;
 
-$link-color:$blue !default;
-$link-hover:$red !default;
+    --header-color:light-dark(var(--jet), white);
+    --font-color:light-dark(var(--jet), rgba(255, 255, 255, 0.8));
+    --subfont-color: color-mix(in oklch, var(--font-color), transparent  50%);
+    --link-color:var(--blue);
+    --link-hover:var(--gray);
 
-// Transitions
-$fast-speed:all 0.18s cubic-bezier(0.4, 0, 0.2, 1) !default;
-$normal-speed:all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !default;
-$slow-speed:all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !default;
-$slowest-speed:all 0.75s cubic-bezier(0.4, 0, 0.2, 1) !default;
+    // Transitions
+    --easing: cubic-bezier(0.4, 0, 0.2, 1);
 
-// Shadows
-$base-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 2px 8px rgba(0, 0, 0, 0.14) !default;
-$hover-shadow: 0 6px 16px rgba(0, 0, 0, 0.25), 0 4px 20px rgba(0, 0, 0, 0.18) !default;
-$selected-shadow: 0 12px 16px rgba(0, 0, 0, 0.25), 0 18px 40px rgba(0, 0, 0, 0.19) !default;
-$solid-shadow: 3px 3px 0px rgba(0,0,0,0.2) !default;
+    --fast-speed: all 0.18s var(--easing);
+    --normal-speed: all 0.3s var(--easing);
+    --slow-speed: all 0.5s var(--easing);
+    --slowest-speed: all 0.75s var(--easing);
 
-// Metrics
-$site-width:960px !default;
-$small-site-width:760px !default;
-$large-site-width:1024px !default;
-$xlarge-site-width:1280px !default;
+    // Shadows
+    --base-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 2px 8px rgba(0, 0, 0, 0.14);
+    --hover-shadow: 0 6px 16px rgba(0, 0, 0, 0.25), 0 4px 20px rgba(0, 0, 0, 0.18);
+    --selected-shadow: 0 12px 16px rgba(0, 0, 0, 0.25), 0 18px 40px rgba(0, 0, 0, 0.19);
+    --solid-shadow: 3px 3px 0px rgba(0,0,0,0.2);
 
-$cell-margin:.5rem !default;
-$cell-padding:.5rem !default;
+    // Container Widths
+    --container-small: 540px;
+    --container-medium: 720px; 
+    --container-large: 960px;   
+    --container-xlarge: 1140px;  
+    --container-xxlarge: 1320px;
 
-// Media Break Adjustments
-$small-break:  480px !default;
-$medium-break: 768px !default;
-$large-break:  1024px !default;
-$xlarge-break: 1280px !default;
+    // Radius
+    --radius-small: 4px;
+    --radius-medium: 8px;
+    --radius-large: 16px;
+
+    // Grid Spacing
+    --cell-margin: .5rem;
+    --cell-padding: .5rem;
+
+    // Forms & Buttons
+    --button-radius: var(--radius-medium);
+    --button-text-color: light-dark(var(--white), var(--black));
+    --button-background: var(--blue);
+    --button-background-secondary: var(--gray);
+    --button-hover-background: var(--gray);
+    --button-active-background: var(--blue-d1);
+    --button-hover-background-secondary: var(--gray-l1);
+    --button-active-background-secondary: var(--gray-l2);
+
+    --form-radius: var(--radius-small);
+    --form-background: transparent;
+    --form-border: var(--gray);
+    --form-hover-border: var(--gray-l2);
+    --form-active-border: var(--blue);
+    --form-disabled-background: color-mix(in oklch, var(--gray-l2), transparent  85%);
+    --form-disabled-border: color-mix(in oklch, var(--gray-l2), transparent  40%);
+}

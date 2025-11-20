@@ -1,6 +1,21 @@
 Change Log
 ==============
 
+## v3.0.0
+This is a major new releast and reworking of thimble for a modern approach to variables.
+
+- moved all overrides to CSS variables
+- added optional buttons module
+- added optional utilities module
+- added optional forms module
+- moved breakpoints to config file
+- updated colors
+- added color helper for light/dark variation
+- added built in light/dark mode
+- added new container classes
+- fixed incorrectly named header classes
+- removed outdated video container and added ratio helper classes
+
 ## V2.3.0
 - remove legacy precompiled css file
 

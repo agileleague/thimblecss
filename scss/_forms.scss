@@ -1,0 +1,148 @@
+@use 'config' as *;
+@if $include-forms {
+
+.input {
+    margin-bottom:1rem
+}
+
+button[type="submit"], input:not([type="checkbox"], [type="radio"]), select, textarea {
+    width:100%
+}
+input, textarea, select {
+    border: 2px solid var(--form-border);
+    border-radius: var(--form-radius, 4px);
+    padding: .75rem 1rem;
+    transition:var(--fast-speed);
+    background-color: var(--form-background, transparent);
+    position:relative;
+    &:hover {
+        border-color: var(--form-hover-border)
+    }
+    &:focus, &:active {
+        border-color: var(--form-active-border)
+    }
+    &:disabled {
+        background-color: var(--form-disabled-background);
+        border-color: var(--form-disabled-border)
+    }
+}
+
+label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.675rem;
+    cursor: pointer;
+    line-height: var(--line-height, 1.5)
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    appearance: none;
+    padding:0;
+    width:1.5rem;
+    height:1.5rem;
+    cursor:pointer;
+    outline-color: transparent;
+    flex-shrink:0;
+    &:after {
+        content: "";
+        position: absolute;
+        transform: scale(.7) rotate(15deg);
+        transition:var(--normal-speed);
+        opacity: 0
+    }
+    &:hover {
+        outline: .4rem solid color-mix(in oklch, var(--gray-l2), transparent  90%)
+    }
+    &:focus, &:active {
+        outline: .5rem solid color-mix(in oklch, var(--gray-l2), transparent  75%)
+    }
+    &:focus-visible {
+        box-shadow: 0 0 0 3px var(--blue)
+    }
+    &:checked {
+        background-color: var(--button-background);
+        border-color: var(--button-background);
+        &::after {
+            opacity: 1;
+            transform: scale(1) rotate(45deg)
+        }
+    }
+}
+
+input[type="checkbox"] {
+    &:checked::after {
+        width: 28%;
+        height: 50%;
+        border: solid var(--button-text-color);
+        border-width: 0 2px 2px 0; 
+        top: 25%;
+        left: 36%
+    }
+}
+
+input[type="radio"] {
+    border-radius: 50%;
+    &:checked::after {
+        width: 50%;
+        height: 50%;
+        background-color: var(--button-text-color);
+        border-radius:50%;
+        top:25%;
+        left:25%
+    }
+}
+
+textarea {
+  resize: vertical;
+  max-width: 100%;
+  height: auto;
+  min-height: 6rem
+}
+
+
+.button, button, [type="button"], [type="reset"], [type="submit"] {
+    border-radius: var(--button-radius, 4px);
+    padding: calc(.75rem + 2px) calc(1rem + 2px);
+    color: var(--button-text-color);
+    background-color: var(--button-background);
+    transition:var(--normal-speed);
+    text-decoration: none;
+    display: inline-block;
+    &:hover {
+        background-color: var(--button-hover-background)
+    }
+    &:active, &:focus {
+        background-color: var(--button-active-background)
+    }
+    &.full {
+        width:100%
+    }
+    &.secondary {
+        background-color: var(--button-background-secondary);
+        &:hover {
+            background-color: var(--button-hover-background-secondary)
+        }
+        &:active, &:focus {
+            background-color: var(--button-active-background-secondary)
+        }   
+    }
+    &.ghost {
+        background-color: transparent;
+        padding: .75rem 1rem;
+        border: 2px solid var(--button-background);
+        color: var(--button-background);
+        &:hover {
+            border-color: var(--button-hover-background);
+            color: var(--button-hover-background);
+            background-color: color-mix(in oklch, var(--button-hover-background), transparent 90%)
+        }
+        &:active, &:focus {
+            border-color: var(--button-active-background);
+            color: var(--button-active-background);
+            background-color: color-mix(in oklch, var(--button-active-background), transparent 90%)
+        }
+    }
+}
+
+} // End if $include-forms
