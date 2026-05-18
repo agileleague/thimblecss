@@ -1,6 +1,6 @@
 {
   "name": "thimblecss",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A nimble micro CSS Framework",
   "main": "scss/_thimble.scss",
   "style": "scss/_thimble.scss",

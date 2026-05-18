@@ -1,7 +1,7 @@
 @use 'thimble-overrides' as *;
 @use 'mixins' as *;
 
-// ThimbleCSS Core v3.0.0
+// ThimbleCSS Core v3.0.1
 
 // Sanitize
 *, *::before, *::after {
@@ -100,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
     color:var(--header-color);
     margin-bottom: calc(var(--line-height) * 1rem)
 }
-h1.super-heading {font-size:4.769rem;line-height:1.22}
+h1.hero {font-size:4.769rem;line-height:1.22}
 h1 {font-size:3.052rem;line-height:1.4}
 h2 {font-size:2.441rem;line-height:1.55}
 h3 {font-size:1.953rem;line-height:1.7}
@@ -109,7 +109,7 @@ h5 {font-size: 1.25rem;line-height:2}
 h6 {font-size: 1rem;line-height:2}
 
 @media #{$medium} {
-    h1.super-heading {font-size:5.961rem;line-height:1.18}
+    h1.hero {font-size:5.961rem;line-height:1.18}
     h1 {font-size:3.815rem;line-height:1.22}
     h2 {font-size:3.052rem;line-height:1.4}
     h3 {font-size:2.441rem;line-height:1.55}
@@ -120,7 +120,7 @@ h6 {font-size: 1rem;line-height:2}
 
 .sub-heading {color:var(--subfont-color)}
 
-.super-heading.vw {font-size:7vw}
+.hero.vw {font-size:7vw}
 h1.vw {font-size:6vw}
 h2.vw {font-size:5vw}
 h3.vw {font-size:4.5vw}
@@ -186,9 +186,11 @@ ol {
 // Media
 img, iframe, canvas, video, picture {
     max-width:100%;
-    width: 100%;
     border:0;
-    border-style:none
+    border-style:none;
+    &.full {
+        width:100%
+    }
 }
 img, picture {height: auto}
 
@@ -386,7 +388,7 @@ $cell-sizes:  (
     @include sizing(medium-);
 
     // VW Headers
-    .super-heading.vw {font-size:5vw}
+    .hero.vw {font-size:5vw}
     h1.vw {font-size:3.5vw}
     h2.vw {font-size:3vw}
     h3.vw {font-size:2.5vw}
