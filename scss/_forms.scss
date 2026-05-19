@@ -100,49 +100,4 @@ textarea {
   min-height: 6rem
 }
 
-
-.button, button, [type="button"], [type="reset"], [type="submit"] {
-    border-radius: var(--button-radius, 4px);
-    padding: calc(.75rem + 2px) calc(1rem + 2px);
-    color: var(--button-text-color);
-    background-color: var(--button-background);
-    transition:var(--normal-speed);
-    text-decoration: none;
-    display: inline-block;
-    &:hover {
-        background-color: var(--button-hover-background)
-    }
-    &:active, &:focus {
-        background-color: var(--button-active-background)
-    }
-    &.full {
-        width:100%
-    }
-    &.secondary {
-        background-color: var(--button-background-secondary);
-        &:hover {
-            background-color: var(--button-hover-background-secondary)
-        }
-        &:active, &:focus {
-            background-color: var(--button-active-background-secondary)
-        }   
-    }
-    &.ghost {
-        background-color: transparent;
-        padding: .75rem 1rem;
-        border: 2px solid var(--button-background);
-        color: var(--button-background);
-        &:hover {
-            border-color: var(--button-hover-background);
-            color: var(--button-hover-background);
-            background-color: color-mix(in oklch, var(--button-hover-background), transparent 90%)
-        }
-        &:active, &:focus {
-            border-color: var(--button-active-background);
-            color: var(--button-active-background);
-            background-color: color-mix(in oklch, var(--button-active-background), transparent 90%)
-        }
-    }
-}
-
 } // End if $include-forms

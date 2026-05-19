@@ -4,6 +4,7 @@ Change Log
 ## v3.0.1
 - rename .super-heading to .hero
 - add .full class to images to prevent auto fill
+- fix duplicate button code in forms include
 
 ## v3.0.0
 This is a major new releast and reworking of thimble for a modern approach to variables.
