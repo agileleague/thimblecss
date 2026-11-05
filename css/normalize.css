@@ -1,0 +1,34 @@
+@layer thimble.normalize {
+  *, *::before, *::after { box-sizing: border-box }
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    line-height: var(--line-height, 1.5)
+  }
+  body { margin: 0; min-block-size: 100svh }
+
+  /* Media */
+  :where(img, picture, video, canvas) { display: block; max-inline-size: 100%; block-size: auto }
+  :where(svg, iframe) { max-inline-size: 100% }
+
+  /* Forms */
+  :where(input, button, textarea, select, optgroup) { font: inherit; color: inherit; letter-spacing: inherit; margin: 0 }
+  :where(button, [type="button"], [type="reset"], [type="submit"]):not(:disabled) { cursor: pointer }
+  :where(:focus-visible) { outline: var(--focus-ring, auto); outline-offset: var(--focus-ring-offset, 2px)}
+
+  /* Text wrapping */
+  :where(h1, h2, h3, h4, h5, h6) { text-wrap: balance }
+  :where(p, li, blockquote, figcaption) { text-wrap: pretty }
+  :where(h1, h2, h3, h4, h5, h6, p, li, blockquote, figcaption) { overflow-wrap: break-word }
+
+  /* typography */
+  :where(h1, h2, h3, h4, h5, h6, p, blockquote, figure, ol, ul) { margin: 0; padding: 0 }
+  :where(p, ul, ol, dl) { margin-block-end: 1em }
+  :where(ul, ol, dl) :where(ul, ol, dl) { margin-block-end: 0 }
+
+  /* Tables */
+  :where(table) { border-collapse: collapse; border-spacing: 0 }
+
+  /* Hidden */
+  [hidden]:where(:not([hidden="until-found"])) { display: none !important }
+}
