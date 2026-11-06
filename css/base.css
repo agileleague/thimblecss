@@ -1,5 +1,3 @@
-@layer thimble.settings, thimble.normalize, thimble.base, thimble.accessibility, thimble.layout, thimble.components, thimble.utilities;
-
 @layer thimble.base {
   body {
     font-family: var(--primary-font);

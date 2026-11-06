@@ -1,0 +1,41 @@
+@layer thimble.components {
+  :where(.button, button, [type="button"], [type="reset"], [type="submit"]) {
+    --hover-mixed: color-mix(in oklch, var(--button-background), var(--button-shade) var(--button-hover-mix));
+    --active-mixed: color-mix(in oklch, var(--button-background), var(--button-shade) var(--button-active-mix));
+
+    display: inline-block;
+    padding: 0.75rem 1rem;
+    border: 2px solid transparent;  /* keeps room for .ghost so sizes match */
+    border-radius: var(--button-radius, 4px);
+    color: var(--button-text-color);
+    background-color: var(--button-background);
+    text-align: center;
+    text-decoration: none;
+    transition:
+      background-color var(--duration) var(--ease),
+      border-color var(--duration) var(--ease),
+      color var(--duration) var(--ease);
+
+    &:hover { background-color: var(--hover-mixed) }
+    &:active { background-color: var(--active-mixed) }
+    &.secondary { --button-background: var(--button-background-secondary) }
+    &.ghost {
+      color: var(--button-background);
+      background-color: transparent;
+      border-color: var(--button-background);
+      &:hover {
+        color: var(--hover-mixed);
+        border-color: var(--hover-mixed);
+        background-color: color-mix(in oklch, var(--hover-mixed), transparent 90%);
+      }
+      &:active {
+        color: var(--active-mixed);
+        border-color: var(--active-mixed);
+        background-color: color-mix(in oklch, var(--active-mixed), transparent 90%);
+      }
+    }
+    &.full { inline-size: 100% }
+    &:disabled, &[aria-disabled="true"] { opacity: 0.5; pointer-events: none }
+  }
+
+}

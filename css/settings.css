@@ -18,6 +18,7 @@
 
     --background-color: light-dark(white, var(--black));
 
+
     /** Typography **/
     --primary-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
     --heading-font: var(--primary-font);
@@ -26,7 +27,7 @@
     --font-color:light-dark(var(--jet), rgba(255, 255, 255, 0.8));
     --subfont-color: color-mix(in oklch, var(--font-color), transparent  50%);
     --muted-color:   color-mix(in oklch, var(--font-color), transparent 25%);
-    --link-color:var(--blue);
+    --link-color:light-dark(var(--blue), color-mix(in oklch, var(--blue), white 46%));
     --link-hover:var(--gray);
 
     /* Fluid type steps(16px to 18px base, ratio 1.25 to 1.333, viewport 320px to 1240px) */
@@ -46,11 +47,40 @@
 
     /* Motion */
     --duration: 0.2s;
-    --ease: ease;
+    --ease: ease-in-out;
+
+    /* Containers */
+    --container-tiny: 25rem;      /* 400px */
+    --container-small: 33.75rem;  /* 540px */
+    --container-medium: 45rem;    /* 720px */
+    --container-large: 60rem;     /* 960px */
+    --container-xlarge: 71.25rem; /* 1140px */
+    --container-xxlarge: 82.5rem; /* 1320px */
+
+    /* Grids & Flex */
+    --gap: 1rem;
+
+    /* Radius */
+    --radius-small: 4px;
+    --radius-medium: 8px;
+    --radius-large: 16px;
 
     /* Forms */
-    --focus-ring-color: light-dark(var(--blue), color-mix(in oklch, var(--blue), white 46%));
-    --focus-ring: 2px solid var(--blue);
+    --focus-ring-color: var(--link-color);
+    --focus-ring: 2px solid var(--focus-ring-color);
     --focus-ring-offset: 2px;
+
+
+    /** Components **/
+
+    /* Buttons */
+    --button-radius: var(--radius-medium);
+    --button-text-color: light-dark(var(--white), var(--black));
+    --button-background: var(--blue);
+    --button-background-secondary: color-mix(in oklch, var(--gray), var(--button-shade) 15%);
+    --button-shade: light-dark(black, white); /* hover & active mix */
+    --button-hover-mix: 10%;
+    --button-active-mix: 20%;
+
   }
 }

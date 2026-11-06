@@ -1,0 +1,61 @@
+@layer thimble.layout {
+  /* Containers */
+  .container-tiny    { max-inline-size: var(--container-tiny) }
+  .container-small   { max-inline-size: var(--container-small) }
+  .container-medium  { max-inline-size: var(--container-medium) }
+  .container-large   { max-inline-size: var(--container-large) }
+  .container-xlarge  { max-inline-size: var(--container-xlarge) }
+  .container-xxlarge { max-inline-size: var(--container-xxlarge) }
+  :is(.container-tiny, .container-small, .container-medium, .container-large, .container-xlarge, .container-xxlarge) {
+    inline-size: 100%;
+    margin-inline: auto;
+  }
+
+  .align-wide {
+    margin-inline: calc(25% - 25vw);
+    max-inline-size: 100vw;
+  }
+  .align-full {
+    margin-inline: calc(50% - 50vw);
+    inline-size: 100vw;
+    max-inline-size: 100vw;
+  }
+
+  /* Grids & Flex */
+  .grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr); 
+    gap: var(--gap, 1rem);
+    &.auto { 
+        grid-template-columns: repeat(auto-fit, minmax(min(var(--grid-min, 16rem), 100%), 1fr)) 
+    }
+  }
+
+
+  .flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+  }
+  :where(.flex).wrap { flex-wrap: wrap }
+  :where(.flex).row-reverse { flex-direction: row-reverse }
+  :where(.flex).column-reverse { flex-direction: column-reverse }
+
+  .align-start { align-items: flex-start }
+  .align-center { align-items: center }
+  .align-end { align-items: flex-end }
+  .align-baseline { align-items: baseline }
+  .align-stretch { align-items: stretch }
+ 
+  .justify-start { justify-content: flex-start }
+  .justify-center { justify-content: center }
+  .justify-end { justify-content: flex-end }
+  .justify-between { justify-content: space-between }
+  .justify-around { justify-content: space-around }
+  .justify-evenly { justify-content: space-evenly }
+ 
+  .self-start { align-self: flex-start }
+  .self-center { align-self: center }
+  .self-end { align-self: flex-end }
+  .self-stretch { align-self: stretch }
+
+}
