@@ -73,14 +73,22 @@
 
     /** Components **/
 
+    --shade: light-dark(black, white); /* hover & active mix */
+
     /* Buttons */
     --button-radius: var(--radius-medium);
     --button-text-color: light-dark(var(--white), var(--black));
     --button-background: var(--blue);
-    --button-background-secondary: color-mix(in oklch, var(--gray), var(--button-shade) 15%);
-    --button-shade: light-dark(black, white); /* hover & active mix */
+    --button-background-secondary: color-mix(in oklch, var(--gray), var(--shade) 15%);
     --button-hover-mix: 10%;
     --button-active-mix: 20%;
+
+    /* Forms */
+    --form-radius: var(--radius-small);
+    --form-background: transparent;
+    --form-border: var(--gray);
+    --form-active-border: var(--blue);
+
 
   }
 }
