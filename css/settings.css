@@ -18,7 +18,6 @@
 
     --background-color: light-dark(white, var(--black));
 
-
     /** Typography **/
     --primary-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
     --heading-font: var(--primary-font);
@@ -49,6 +48,12 @@
     --duration: 0.2s;
     --ease: ease-in-out;
 
+    /* Shadows */
+    --base-shadow: 0 2px 5px rgba(0,0,0,.2), 0 2px 8px rgba(0,0,0,.14);
+    --hover-shadow: 0 6px 16px rgba(0,0,0,.25), 0 4px 20px rgba(0,0,0,.18);
+    --selected-shadow: 0 12px 16px rgba(0,0,0,.25), 0 18px 40px rgba(0,0,0,.19);
+    --solid-shadow: 3px 3px 0 rgba(0,0,0,.2);
+
     /* Containers */
     --container-tiny: 25rem;      /* 400px */
     --container-small: 33.75rem;  /* 540px */
@@ -70,7 +75,6 @@
     --focus-ring: 2px solid var(--focus-ring-color);
     --focus-ring-offset: 2px;
 
-
     /** Components **/
 
     --shade: light-dark(black, white); /* hover & active mix */
@@ -78,7 +82,7 @@
     /* Buttons */
     --button-radius: var(--radius-medium);
     --button-text-color: light-dark(var(--white), var(--black));
-    --button-background: var(--blue);
+    --button-background: light-dark(var(--blue), color-mix(in oklch, var(--blue), white 46%));
     --button-background-secondary: color-mix(in oklch, var(--gray), var(--shade) 15%);
     --button-hover-mix: 10%;
     --button-active-mix: 20%;

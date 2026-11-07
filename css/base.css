@@ -41,6 +41,18 @@
   sup { top: -0.5em }
   sub { bottom: -0.25em }
 
+  /* Links */
+  a {
+    color: var(--link-color);
+    transition: color var(--duration) var(--ease);
+    &:hover, &:active { color: var(--link-hover) }
+    &.plain {
+      color: inherit;
+      text-decoration: none;
+      &:hover, &:active { color: inherit; text-decoration: underline }
+    }
+  }
+
   /* Lists */
   ul {
     margin-inline-start: 1.2em;

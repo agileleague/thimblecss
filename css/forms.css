@@ -25,6 +25,7 @@
       border-color: color-mix(in oklch, var(--form-border), transparent 60%);
       cursor: not-allowed
     }
+     &:user-invalid, &[aria-invalid="true"] { border-color: var(--form-invalid-border, var(--red)) }
   }
 
   ::placeholder { color: var(--muted-color); opacity: 1 }  /* Firefox dims placeholders */
