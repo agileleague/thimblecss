@@ -8,17 +8,17 @@
   .container-xxlarge { max-inline-size: var(--container-xxlarge) }
   :is(.container-tiny, .container-small, .container-medium, .container-large, .container-xlarge, .container-xxlarge) {
     inline-size: 100%;
-    margin-inline: auto;
+    margin-inline: auto
   }
 
   .align-wide {
     margin-inline: calc(25% - 25vw);
-    max-inline-size: 100vw;
+    max-inline-size: 100vw
   }
   .align-full {
     margin-inline: calc(50% - 50vw);
     inline-size: 100vw;
-    max-inline-size: 100vw;
+    max-inline-size: 100vw
   }
 
   /* Grids & Flex */
@@ -34,7 +34,7 @@
 
   .flex {
     display: flex;
-    gap: var(--gap, 1rem);
+    gap: var(--gap, 1rem)
   }
   :where(.flex).wrap { flex-wrap: wrap }
   :where(.flex).row-reverse { flex-direction: row-reverse }

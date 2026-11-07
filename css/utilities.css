@@ -72,7 +72,6 @@
   .aspect-4-3 { aspect-ratio: 4 / 3 }
   .aspect-1-1, .aspect-square { aspect-ratio: 1 / 1 }
 
-
   /* Spacing */
   .gap-0 { gap: 0 }
   .gap-1 { gap: var(--space-1) }
@@ -136,7 +135,6 @@
 
   .mx-auto { margin-inline: auto }
     
-  
   @media (width >= 30em) {
     .small-hide { display: none }
     .small-text-left { text-align: left }
@@ -194,6 +192,6 @@
     border: 0;
     overflow: hidden;
     clip-path: inset(50%);
-    white-space: nowrap;
+    white-space: nowrap
   }
 }

@@ -17,7 +17,6 @@
     transition:
       border-color var(--duration) var(--ease),
       background-color var(--duration) var(--ease);
-
     &:hover { border-color: color-mix(in oklch, var(--form-border), var(--shade) 25%) }
     &:focus, &:active { border-color: var(--form-active-border) }
     &:user-invalid, &[aria-invalid="true"] { border-color: var(--form-invalid-border, var(--red)) }
@@ -73,7 +72,7 @@
 
     &:hover {
       border-color: color-mix(in oklch, var(--form-border), var(--shade) 25%);
-      box-shadow: 0 0 0 0.4rem color-mix(in oklch, var(--form-border), transparent 90%);
+      box-shadow: 0 0 0 0.4rem color-mix(in oklch, var(--form-border), transparent 90%)
     }
     &:active, &:focus-visible {
       box-shadow: 0 0 0 0.5rem color-mix(in oklch, var(--form-border), transparent 75%)

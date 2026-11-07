@@ -14,7 +14,7 @@
   /* Forms */
   :where(input, button, textarea, select, optgroup) { font: inherit; color: inherit; letter-spacing: inherit; margin: 0 }
   :where(button, [type="button"], [type="reset"], [type="submit"]):not(:disabled) { cursor: pointer }
-  :where(:focus-visible) { outline: var(--focus-ring, auto); outline-offset: var(--focus-ring-offset, 2px)}
+  :where(:focus-visible) { outline: var(--focus-ring, auto); outline-offset: var(--focus-ring-offset, 2px) }
 
   /* Text wrapping */
   :where(h1, h2, h3, h4, h5, h6) { text-wrap: balance }

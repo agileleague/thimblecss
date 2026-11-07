@@ -26,12 +26,12 @@
       &:hover {
         color: var(--hover-mixed);
         border-color: var(--hover-mixed);
-        background-color: color-mix(in oklch, var(--hover-mixed), transparent 90%);
+        background-color: color-mix(in oklch, var(--hover-mixed), transparent 90%)
       }
       &:active {
         color: var(--active-mixed);
         border-color: var(--active-mixed);
-        background-color: color-mix(in oklch, var(--active-mixed), transparent 90%);
+        background-color: color-mix(in oklch, var(--active-mixed), transparent 90%)
       }
     }
     &.full { inline-size: 100% }
