@@ -101,7 +101,7 @@
     --form-radius: var(--radius-small);
     --form-background: transparent;
     --form-border: var(--gray);
-    --form-active-border: var(--blue);
+    --form-active-border: var(--focus-ring-color);
     --form-invalid-border: var(--red);
   }
 }
