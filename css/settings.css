@@ -27,7 +27,7 @@
     --subfont-color: color-mix(in oklch, var(--font-color), transparent  50%);
     --muted-color:   color-mix(in oklch, var(--font-color), transparent 25%);
     --link-color:light-dark(var(--blue), color-mix(in oklch, var(--blue), white 46%));
-    --link-hover:var(--gray);
+    --link-hover: color-mix(in oklch, var(--link-color), var(--shade) 25%);
 
     /* Fluid type steps(16px to 18px base, ratio 1.25 to 1.333, viewport 320px to 1240px) */
     --type--1: clamp(0.8rem, 0.785rem + 0.08vw, 0.84rem);
@@ -62,6 +62,16 @@
     --container-xlarge: 71.25rem; /* 1140px */
     --container-xxlarge: 82.5rem; /* 1320px */
 
+    /* Spacing */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+    --space-7: 3rem;
+    --space-8: 4rem;
+
     /* Grids & Flex */
     --gap: 1rem;
 
@@ -92,7 +102,6 @@
     --form-background: transparent;
     --form-border: var(--gray);
     --form-active-border: var(--blue);
-
-
+    --form-invalid-border: var(--red);
   }
 }

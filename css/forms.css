@@ -20,12 +20,12 @@
 
     &:hover { border-color: color-mix(in oklch, var(--form-border), var(--shade) 25%) }
     &:focus, &:active { border-color: var(--form-active-border) }
+    &:user-invalid, &[aria-invalid="true"] { border-color: var(--form-invalid-border, var(--red)) }
     &:disabled {
       background-color: color-mix(in oklch, var(--form-border), transparent 85%);
       border-color: color-mix(in oklch, var(--form-border), transparent 60%);
       cursor: not-allowed
     }
-     &:user-invalid, &[aria-invalid="true"] { border-color: var(--form-invalid-border, var(--red)) }
   }
 
   ::placeholder { color: var(--muted-color); opacity: 1 }  /* Firefox dims placeholders */
@@ -78,6 +78,7 @@
     &:active, &:focus-visible {
       box-shadow: 0 0 0 0.5rem color-mix(in oklch, var(--form-border), transparent 75%)
     }
+    &:user-invalid, &[aria-invalid="true"] { border-color: var(--form-invalid-border, var(--red)) }
     &:checked {
       background-color: var(--button-background);
       border-color: var(--button-background);
