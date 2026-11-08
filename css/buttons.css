@@ -34,6 +34,12 @@
         background-color: color-mix(in oklch, var(--active-mixed), transparent 90%)
       }
     }
+    &.plain {
+        color: inherit;
+        background-color: transparent;
+        border-color: transparent;
+        &:hover, &:active { color: var(--hover-mixed) }
+    }
     &:disabled, &[aria-disabled="true"] { opacity: 0.5; pointer-events: none }
   }
 }

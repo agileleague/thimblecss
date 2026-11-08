@@ -21,16 +21,16 @@
     /** Typography **/
     --primary-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
     --heading-font: var(--primary-font);
+    --mono-font: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-    --header-color:light-dark(var(--jet), white);
+    --heading-color:light-dark(var(--jet), white);
     --font-color:light-dark(var(--jet), rgba(255, 255, 255, 0.8));
-    --subfont-color: color-mix(in oklch, var(--font-color), transparent  50%);
     --muted-color:   color-mix(in oklch, var(--font-color), transparent 25%);
     --link-color:light-dark(var(--blue), color-mix(in oklch, var(--blue), white 46%));
     --link-hover: color-mix(in oklch, var(--link-color), var(--shade) 25%);
 
     /* Fluid type steps(16px to 18px base, ratio 1.25 to 1.333, viewport 320px to 1240px) */
-    --type--1: clamp(0.8rem, 0.785rem + 0.08vw, 0.84rem);
+    --type-neg-1: clamp(0.8rem, 0.785rem + 0.08vw, 0.84rem);
     --type-0:  clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
     --type-1:  clamp(1.25rem, 1.16rem + 0.43vw, 1.5rem);
     --type-2:  clamp(1.56rem, 1.41rem + 0.76vw, 2rem);

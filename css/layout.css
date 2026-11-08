@@ -15,11 +15,11 @@
     margin-inline: auto
   }
 
-  .align-wide {
+  .break-wide {
     margin-inline: calc(25% - 25vw);
     max-inline-size: 100vw
   }
-  .align-full {
+  .break-full {
     margin-inline: calc(50% - 50vw);
     inline-size: 100vw;
     max-inline-size: 100vw

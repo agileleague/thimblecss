@@ -40,7 +40,7 @@
   label:has(> :is([type="checkbox"], [type="radio"])) {
     display: flex;
     align-items: flex-start;
-    gap: 0.675rem
+    gap: 0.625rem
   }
   label:has(> :disabled) { cursor: not-allowed; opacity: 0.6 }
 
