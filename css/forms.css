@@ -54,7 +54,7 @@
     block-size: 1.5rem;
     padding: 0;
     border: 2px solid var(--form-border);
-    border-radius: var(--form-radius, 4px);
+    border-radius: var(--form-radius);
     background-color: var(--form-background, transparent);
     cursor: pointer;
     transition:

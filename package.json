@@ -1,21 +1,37 @@
 {
   "name": "thimblecss",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "description": "A nimble micro CSS Framework",
-  "main": "scss/_thimble.scss",
-  "style": "scss/_thimble.scss",
+  "main": "dist/thimble.css",
+  "style": "dist/thimble.css",
+  "jsdelivr": "dist/thimble.min.css",
+  "unpkg": "dist/thimble.min.css",
+  "exports": {
+    ".": "./dist/thimble.css",
+    "./min": "./dist/thimble.min.css",
+    "./css/*": "./css/*"
+  },
   "files": [
-    "scss",
+    "dist",
+    "css",
     "LICENSE",
     "README.md"
   ],
+  "scripts": {
+    "build": "lightningcss --bundle css/thimble.css -o dist/thimble.css && lightningcss --bundle --minify css/thimble.css -o dist/thimble.min.css",
+    "prepublishOnly": "npm run build"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/agileleague/thimblecss.git"
   },
+  "devDependencies": {
+    "lightningcss-cli": "^1.33.0"
+  },
   "keywords": [
     "css",
     "flexbox",
+    "grid",
     "front-end",
     "framework",
     "microframework",
@@ -23,8 +39,7 @@
     "html5",
     "mobile-first",
     "responsive",
-    "sanitize",
-    "scss",
+    "normalize",
     "web"
   ],
   "author": "Drew Nolte <drew@agileleague.com>",

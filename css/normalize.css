@@ -27,6 +27,7 @@
   :where(ul, ol, dl) :where(ul, ol, dl) { margin-block-end: 0 }
   :where(code, kbd, samp, pre) { font-family: var(--mono-font); font-size: 0.9em }
   :where(pre) { overflow: auto }
+  :where(pre code) { font-size: 1em }
 
   /* Tables */
   :where(table) { border-collapse: collapse; border-spacing: 0 }
