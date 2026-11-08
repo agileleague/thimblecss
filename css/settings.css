@@ -74,6 +74,7 @@
 
     /* Grids & Flex */
     --gap: 1rem;
+    --grid-min: 16rem;
 
     /* Radius */
     --radius-small: 4px;

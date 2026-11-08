@@ -12,7 +12,7 @@
     inline-size: 100%;
     padding: 0.75rem 1rem;
     border: 2px solid var(--form-border);
-    border-radius: var(--form-radius, 4px);
+    border-radius: var(--form-radius);
     background-color: var(--form-background, transparent);
     transition:
       border-color var(--duration) var(--ease),
@@ -97,12 +97,9 @@
 
   input[type="radio"] { border-radius: 50% }
   input[type="radio"]:checked::after {
-    inline-size: 50%;
-    block-size: 50%;
+    inline-size: 0; block-size: 0;
+    border: 0.375rem solid var(--button-text-color);
     border-radius: 50%;
-    background-color: var(--button-text-color);
-    top: 25%;
-    left: 25%
+    top: 50%; left: 50%; translate: -50% -50%;
   }
-
 }

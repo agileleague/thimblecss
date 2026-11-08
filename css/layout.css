@@ -1,3 +1,7 @@
+@property --cols   { syntax: "<integer>"; inherits: false; initial-value: 1 }
+@property --span   { syntax: "<integer>"; inherits: false; initial-value: 1 }
+@property --track  { syntax: "<integer>"; inherits: false; initial-value: 1 }
+
 @layer thimble.layout {
   /* Containers */
   .container-tiny    { max-inline-size: var(--container-tiny) }
@@ -24,10 +28,13 @@
   /* Grids & Flex */
   .grid {
     display: grid;
-    grid-template-columns: minmax(0, 1fr); 
+    grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); 
     gap: var(--gap, 1rem);
+    > * { grid-column: span min(var(--span), var(--track)) }
     &.auto { 
-        grid-template-columns: repeat(auto-fit, minmax(min(var(--grid-min, 16rem), 100%), 1fr)) 
+      grid-template-columns: repeat(auto-fit, minmax(min(var(--grid-min, 16rem), 100%), 1fr));
+      > * { grid-column: auto } /* If column count unknown, spans ignored */
+      > .span-full { grid-column: 1 / -1 }
     }
   }
 

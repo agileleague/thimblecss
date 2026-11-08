@@ -1,41 +1,17 @@
 @layer thimble.layout {
-  .cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)) }
-  .cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) }
-  .cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) }
-  .cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)) }
-  .cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)) }
-  .cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)) }
-  .cols-7 { grid-template-columns: repeat(7, minmax(0, 1fr)) }
-  .cols-8 { grid-template-columns: repeat(8, minmax(0, 1fr)) }
-  .cols-9 { grid-template-columns: repeat(9, minmax(0, 1fr)) }
-  .cols-10 { grid-template-columns: repeat(10, minmax(0, 1fr)) }
-  .cols-11 { grid-template-columns: repeat(11, minmax(0, 1fr)) }
-  .cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)) }
-  .span-1 { grid-column: span 1 }
-  .span-2 { grid-column: span 2 }
-  .span-3 { grid-column: span 3 }
-  .span-4 { grid-column: span 4 }
-  .span-5 { grid-column: span 5 }
-  .span-6 { grid-column: span 6 }
-  .span-7 { grid-column: span 7 }
-  .span-8 { grid-column: span 8 }
-  .span-9 { grid-column: span 9 }
-  .span-10 { grid-column: span 10 }
-  .span-11 { grid-column: span 11 }
-  .span-12 { grid-column: span 12 }
-  .span-full { grid-column: 1 / -1 }
-  .order-1 { order: 1 }
-  .order-2 { order: 2 }
-  .order-3 { order: 3 }
-  .order-4 { order: 4 }
-  .order-5 { order: 5 }
-  .order-6 { order: 6 }
-  .order-7 { order: 7 }
-  .order-8 { order: 8 }
-  .order-9 { order: 9 }
-  .order-10 { order: 10 }
-  .order-11 { order: 11 }
-  .order-12 { order: 12 }
+  .cols-1 { --cols: 1; > * { --track: 1 } }     .span-1 { --span: 1 }    .order-1 { order: 1 }
+  .cols-2 { --cols: 2; > * { --track: 2 } }     .span-2 { --span: 2 }    .order-2 { order: 2 }
+  .cols-3 { --cols: 3; > * { --track: 3 } }     .span-3 { --span: 3 }    .order-3 { order: 3 }
+  .cols-4 { --cols: 4; > * { --track: 4 } }     .span-4 { --span: 4 }    .order-4 { order: 4 }
+  .cols-5 { --cols: 5; > * { --track: 5 } }     .span-5 { --span: 5 }    .order-5 { order: 5 }
+  .cols-6 { --cols: 6; > * { --track: 6 } }     .span-6 { --span: 6 }    .order-6 { order: 6 }
+  .cols-7 { --cols: 7; > * { --track: 7 } }     .span-7 { --span: 7 }    .order-7 { order: 7 }
+  .cols-8 { --cols: 8; > * { --track: 8 } }     .span-8 { --span: 8 }    .order-8 { order: 8 }
+  .cols-9 { --cols: 9; > * { --track: 9 } }     .span-9 { --span: 9 }    .order-9 { order: 9 }
+  .cols-10 { --cols: 10; > * { --track: 10 } }  .span-10 { --span: 10 }  .order-10 { order: 10 }
+  .cols-11 { --cols: 11; > * { --track: 11 } }  .span-11 { --span: 11 }  .order-11 { order: 11 }
+  .cols-12 { --cols: 12; > * { --track: 12 } }  .span-12 { --span: 12 }  .order-12 { order: 12 }
+  .span-full { --span: 999 }
   :where(.flex).row { flex-direction: row }
   :where(.flex).column { flex-direction: column }
   .fit { flex: 0 0 auto }
@@ -43,43 +19,20 @@
 
   /* 480px */
   @media (width >= 30em) {
-    .small-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)) }
-    .small-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) }
-    .small-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) }
-    .small-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)) }
-    .small-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)) }
-    .small-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)) }
-    .small-cols-7 { grid-template-columns: repeat(7, minmax(0, 1fr)) }
-    .small-cols-8 { grid-template-columns: repeat(8, minmax(0, 1fr)) }
-    .small-cols-9 { grid-template-columns: repeat(9, minmax(0, 1fr)) }
-    .small-cols-10 { grid-template-columns: repeat(10, minmax(0, 1fr)) }
-    .small-cols-11 { grid-template-columns: repeat(11, minmax(0, 1fr)) }
-    .small-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)) }
-    .small-span-1 { grid-column: span 1 }
-    .small-span-2 { grid-column: span 2 }
-    .small-span-3 { grid-column: span 3 }
-    .small-span-4 { grid-column: span 4 }
-    .small-span-5 { grid-column: span 5 }
-    .small-span-6 { grid-column: span 6 }
-    .small-span-7 { grid-column: span 7 }
-    .small-span-8 { grid-column: span 8 }
-    .small-span-9 { grid-column: span 9 }
-    .small-span-10 { grid-column: span 10 }
-    .small-span-11 { grid-column: span 11 }
-    .small-span-12 { grid-column: span 12 }
-    .small-span-full { grid-column: 1 / -1 }
-    .small-order-1 { order: 1 }
-    .small-order-2 { order: 2 }
-    .small-order-3 { order: 3 }
-    .small-order-4 { order: 4 }
-    .small-order-5 { order: 5 }
-    .small-order-6 { order: 6 }
-    .small-order-7 { order: 7 }
-    .small-order-8 { order: 8 }
-    .small-order-9 { order: 9 }
-    .small-order-10 { order: 10 }
-    .small-order-11 { order: 11 }
-    .small-order-12 { order: 12 }
+    .small-cols-1 { --cols: 1; > * { --track: 1 } }     .small-span-1 { --span: 1 }    .small-order-1 { order: 1 }
+    .small-cols-2 { --cols: 2; > * { --track: 2 } }     .small-span-2 { --span: 2 }    .small-order-2 { order: 2 }
+    .small-cols-3 { --cols: 3; > * { --track: 3 } }     .small-span-3 { --span: 3 }    .small-order-3 { order: 3 }
+    .small-cols-4 { --cols: 4; > * { --track: 4 } }     .small-span-4 { --span: 4 }    .small-order-4 { order: 4 }
+    .small-cols-5 { --cols: 5; > * { --track: 5 } }     .small-span-5 { --span: 5 }    .small-order-5 { order: 5 }
+    .small-cols-6 { --cols: 6; > * { --track: 6 } }     .small-span-6 { --span: 6 }    .small-order-6 { order: 6 }
+    .small-cols-7 { --cols: 7; > * { --track: 7 } }     .small-span-7 { --span: 7 }    .small-order-7 { order: 7 }
+    .small-cols-8 { --cols: 8; > * { --track: 8 } }     .small-span-8 { --span: 8 }    .small-order-8 { order: 8 }
+    .small-cols-9 { --cols: 9; > * { --track: 9 } }     .small-span-9 { --span: 9 }    .small-order-9 { order: 9 }
+    .small-cols-10 { --cols: 10; > * { --track: 10 } }  .small-span-10 { --span: 10 }  .small-order-10 { order: 10 }
+    .small-cols-11 { --cols: 11; > * { --track: 11 } }  .small-span-11 { --span: 11 }  .small-order-11 { order: 11 }
+    .small-cols-12 { --cols: 12; > * { --track: 12 } }  .small-span-12 { --span: 12 }  .small-order-12 { order: 12 }
+    .small-span-full { --span: 999 }
+    .grid.auto > .small-span-full { grid-column: 1 / -1 }
     :where(.flex).small-row { flex-direction: row }
     :where(.flex).small-column { flex-direction: column }
     .small-fit { flex: 0 0 auto }
@@ -88,43 +41,20 @@
 
   /* 768px */
   @media (width >= 48em) {
-    .medium-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)) }
-    .medium-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) }
-    .medium-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) }
-    .medium-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)) }
-    .medium-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)) }
-    .medium-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)) }
-    .medium-cols-7 { grid-template-columns: repeat(7, minmax(0, 1fr)) }
-    .medium-cols-8 { grid-template-columns: repeat(8, minmax(0, 1fr)) }
-    .medium-cols-9 { grid-template-columns: repeat(9, minmax(0, 1fr)) }
-    .medium-cols-10 { grid-template-columns: repeat(10, minmax(0, 1fr)) }
-    .medium-cols-11 { grid-template-columns: repeat(11, minmax(0, 1fr)) }
-    .medium-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)) }
-    .medium-span-1 { grid-column: span 1 }
-    .medium-span-2 { grid-column: span 2 }
-    .medium-span-3 { grid-column: span 3 }
-    .medium-span-4 { grid-column: span 4 }
-    .medium-span-5 { grid-column: span 5 }
-    .medium-span-6 { grid-column: span 6 }
-    .medium-span-7 { grid-column: span 7 }
-    .medium-span-8 { grid-column: span 8 }
-    .medium-span-9 { grid-column: span 9 }
-    .medium-span-10 { grid-column: span 10 }
-    .medium-span-11 { grid-column: span 11 }
-    .medium-span-12 { grid-column: span 12 }
-    .medium-span-full { grid-column: 1 / -1 }
-    .medium-order-1 { order: 1 }
-    .medium-order-2 { order: 2 }
-    .medium-order-3 { order: 3 }
-    .medium-order-4 { order: 4 }
-    .medium-order-5 { order: 5 }
-    .medium-order-6 { order: 6 }
-    .medium-order-7 { order: 7 }
-    .medium-order-8 { order: 8 }
-    .medium-order-9 { order: 9 }
-    .medium-order-10 { order: 10 }
-    .medium-order-11 { order: 11 }
-    .medium-order-12 { order: 12 }
+    .medium-cols-1 { --cols: 1; > * { --track: 1 } }     .medium-span-1 { --span: 1 }    .medium-order-1 { order: 1 }
+    .medium-cols-2 { --cols: 2; > * { --track: 2 } }     .medium-span-2 { --span: 2 }    .medium-order-2 { order: 2 }
+    .medium-cols-3 { --cols: 3; > * { --track: 3 } }     .medium-span-3 { --span: 3 }    .medium-order-3 { order: 3 }
+    .medium-cols-4 { --cols: 4; > * { --track: 4 } }     .medium-span-4 { --span: 4 }    .medium-order-4 { order: 4 }
+    .medium-cols-5 { --cols: 5; > * { --track: 5 } }     .medium-span-5 { --span: 5 }    .medium-order-5 { order: 5 }
+    .medium-cols-6 { --cols: 6; > * { --track: 6 } }     .medium-span-6 { --span: 6 }    .medium-order-6 { order: 6 }
+    .medium-cols-7 { --cols: 7; > * { --track: 7 } }     .medium-span-7 { --span: 7 }    .medium-order-7 { order: 7 }
+    .medium-cols-8 { --cols: 8; > * { --track: 8 } }     .medium-span-8 { --span: 8 }    .medium-order-8 { order: 8 }
+    .medium-cols-9 { --cols: 9; > * { --track: 9 } }     .medium-span-9 { --span: 9 }    .medium-order-9 { order: 9 }
+    .medium-cols-10 { --cols: 10; > * { --track: 10 } }  .medium-span-10 { --span: 10 }  .medium-order-10 { order: 10 }
+    .medium-cols-11 { --cols: 11; > * { --track: 11 } }  .medium-span-11 { --span: 11 }  .medium-order-11 { order: 11 }
+    .medium-cols-12 { --cols: 12; > * { --track: 12 } }  .medium-span-12 { --span: 12 }  .medium-order-12 { order: 12 }
+    .medium-span-full { --span: 999 }
+    .grid.auto > .medium-span-full { grid-column: 1 / -1 }
     :where(.flex).medium-row { flex-direction: row }
     :where(.flex).medium-column { flex-direction: column }
     .medium-fit { flex: 0 0 auto }
@@ -133,43 +63,20 @@
 
   /* 1024px */
   @media (width >= 64em) {
-    .large-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)) }
-    .large-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) }
-    .large-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) }
-    .large-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)) }
-    .large-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)) }
-    .large-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)) }
-    .large-cols-7 { grid-template-columns: repeat(7, minmax(0, 1fr)) }
-    .large-cols-8 { grid-template-columns: repeat(8, minmax(0, 1fr)) }
-    .large-cols-9 { grid-template-columns: repeat(9, minmax(0, 1fr)) }
-    .large-cols-10 { grid-template-columns: repeat(10, minmax(0, 1fr)) }
-    .large-cols-11 { grid-template-columns: repeat(11, minmax(0, 1fr)) }
-    .large-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)) }
-    .large-span-1 { grid-column: span 1 }
-    .large-span-2 { grid-column: span 2 }
-    .large-span-3 { grid-column: span 3 }
-    .large-span-4 { grid-column: span 4 }
-    .large-span-5 { grid-column: span 5 }
-    .large-span-6 { grid-column: span 6 }
-    .large-span-7 { grid-column: span 7 }
-    .large-span-8 { grid-column: span 8 }
-    .large-span-9 { grid-column: span 9 }
-    .large-span-10 { grid-column: span 10 }
-    .large-span-11 { grid-column: span 11 }
-    .large-span-12 { grid-column: span 12 }
-    .large-span-full { grid-column: 1 / -1 }
-    .large-order-1 { order: 1 }
-    .large-order-2 { order: 2 }
-    .large-order-3 { order: 3 }
-    .large-order-4 { order: 4 }
-    .large-order-5 { order: 5 }
-    .large-order-6 { order: 6 }
-    .large-order-7 { order: 7 }
-    .large-order-8 { order: 8 }
-    .large-order-9 { order: 9 }
-    .large-order-10 { order: 10 }
-    .large-order-11 { order: 11 }
-    .large-order-12 { order: 12 }
+    .large-cols-1 { --cols: 1; > * { --track: 1 } }     .large-span-1 { --span: 1 }    .large-order-1 { order: 1 }
+    .large-cols-2 { --cols: 2; > * { --track: 2 } }     .large-span-2 { --span: 2 }    .large-order-2 { order: 2 }
+    .large-cols-3 { --cols: 3; > * { --track: 3 } }     .large-span-3 { --span: 3 }    .large-order-3 { order: 3 }
+    .large-cols-4 { --cols: 4; > * { --track: 4 } }     .large-span-4 { --span: 4 }    .large-order-4 { order: 4 }
+    .large-cols-5 { --cols: 5; > * { --track: 5 } }     .large-span-5 { --span: 5 }    .large-order-5 { order: 5 }
+    .large-cols-6 { --cols: 6; > * { --track: 6 } }     .large-span-6 { --span: 6 }    .large-order-6 { order: 6 }
+    .large-cols-7 { --cols: 7; > * { --track: 7 } }     .large-span-7 { --span: 7 }    .large-order-7 { order: 7 }
+    .large-cols-8 { --cols: 8; > * { --track: 8 } }     .large-span-8 { --span: 8 }    .large-order-8 { order: 8 }
+    .large-cols-9 { --cols: 9; > * { --track: 9 } }     .large-span-9 { --span: 9 }    .large-order-9 { order: 9 }
+    .large-cols-10 { --cols: 10; > * { --track: 10 } }  .large-span-10 { --span: 10 }  .large-order-10 { order: 10 }
+    .large-cols-11 { --cols: 11; > * { --track: 11 } }  .large-span-11 { --span: 11 }  .large-order-11 { order: 11 }
+    .large-cols-12 { --cols: 12; > * { --track: 12 } }  .large-span-12 { --span: 12 }  .large-order-12 { order: 12 }
+    .large-span-full { --span: 999 }
+    .grid.auto > .large-span-full { grid-column: 1 / -1 }
     :where(.flex).large-row { flex-direction: row }
     :where(.flex).large-column { flex-direction: column }
     .large-fit { flex: 0 0 auto }
@@ -178,47 +85,23 @@
 
   /* 1280px */
   @media (width >= 80em) {
-    .xlarge-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)) }
-    .xlarge-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) }
-    .xlarge-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) }
-    .xlarge-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)) }
-    .xlarge-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)) }
-    .xlarge-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)) }
-    .xlarge-cols-7 { grid-template-columns: repeat(7, minmax(0, 1fr)) }
-    .xlarge-cols-8 { grid-template-columns: repeat(8, minmax(0, 1fr)) }
-    .xlarge-cols-9 { grid-template-columns: repeat(9, minmax(0, 1fr)) }
-    .xlarge-cols-10 { grid-template-columns: repeat(10, minmax(0, 1fr)) }
-    .xlarge-cols-11 { grid-template-columns: repeat(11, minmax(0, 1fr)) }
-    .xlarge-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)) }
-    .xlarge-span-1 { grid-column: span 1 }
-    .xlarge-span-2 { grid-column: span 2 }
-    .xlarge-span-3 { grid-column: span 3 }
-    .xlarge-span-4 { grid-column: span 4 }
-    .xlarge-span-5 { grid-column: span 5 }
-    .xlarge-span-6 { grid-column: span 6 }
-    .xlarge-span-7 { grid-column: span 7 }
-    .xlarge-span-8 { grid-column: span 8 }
-    .xlarge-span-9 { grid-column: span 9 }
-    .xlarge-span-10 { grid-column: span 10 }
-    .xlarge-span-11 { grid-column: span 11 }
-    .xlarge-span-12 { grid-column: span 12 }
-    .xlarge-span-full { grid-column: 1 / -1 }
-    .xlarge-order-1 { order: 1 }
-    .xlarge-order-2 { order: 2 }
-    .xlarge-order-3 { order: 3 }
-    .xlarge-order-4 { order: 4 }
-    .xlarge-order-5 { order: 5 }
-    .xlarge-order-6 { order: 6 }
-    .xlarge-order-7 { order: 7 }
-    .xlarge-order-8 { order: 8 }
-    .xlarge-order-9 { order: 9 }
-    .xlarge-order-10 { order: 10 }
-    .xlarge-order-11 { order: 11 }
-    .xlarge-order-12 { order: 12 }
+    .xlarge-cols-1 { --cols: 1; > * { --track: 1 } }     .xlarge-span-1 { --span: 1 }    .xlarge-order-1 { order: 1 }
+    .xlarge-cols-2 { --cols: 2; > * { --track: 2 } }     .xlarge-span-2 { --span: 2 }    .xlarge-order-2 { order: 2 }
+    .xlarge-cols-3 { --cols: 3; > * { --track: 3 } }     .xlarge-span-3 { --span: 3 }    .xlarge-order-3 { order: 3 }
+    .xlarge-cols-4 { --cols: 4; > * { --track: 4 } }     .xlarge-span-4 { --span: 4 }    .xlarge-order-4 { order: 4 }
+    .xlarge-cols-5 { --cols: 5; > * { --track: 5 } }     .xlarge-span-5 { --span: 5 }    .xlarge-order-5 { order: 5 }
+    .xlarge-cols-6 { --cols: 6; > * { --track: 6 } }     .xlarge-span-6 { --span: 6 }    .xlarge-order-6 { order: 6 }
+    .xlarge-cols-7 { --cols: 7; > * { --track: 7 } }     .xlarge-span-7 { --span: 7 }    .xlarge-order-7 { order: 7 }
+    .xlarge-cols-8 { --cols: 8; > * { --track: 8 } }     .xlarge-span-8 { --span: 8 }    .xlarge-order-8 { order: 8 }
+    .xlarge-cols-9 { --cols: 9; > * { --track: 9 } }     .xlarge-span-9 { --span: 9 }    .xlarge-order-9 { order: 9 }
+    .xlarge-cols-10 { --cols: 10; > * { --track: 10 } }  .xlarge-span-10 { --span: 10 }  .xlarge-order-10 { order: 10 }
+    .xlarge-cols-11 { --cols: 11; > * { --track: 11 } }  .xlarge-span-11 { --span: 11 }  .xlarge-order-11 { order: 11 }
+    .xlarge-cols-12 { --cols: 12; > * { --track: 12 } }  .xlarge-span-12 { --span: 12 }  .xlarge-order-12 { order: 12 }
+    .xlarge-span-full { --span: 999 }
+    .grid.auto > .xlarge-span-full { grid-column: 1 / -1 }
     :where(.flex).xlarge-row { flex-direction: row }
     :where(.flex).xlarge-column { flex-direction: column }
     .xlarge-fit { flex: 0 0 auto }
     .xlarge-fill { flex: 1 1 0; min-inline-size: 0 }
   }
-
 }

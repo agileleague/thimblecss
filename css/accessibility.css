@@ -1,9 +1,9 @@
 @layer thimble.accessibility {
   /* Reduced Motion */
   @media (prefers-reduced-motion: reduce) {
-    *:not(.motion-ok),
-    *:not(.motion-ok)::before,
-    *:not(.motion-ok)::after {
+    :not(.motion-ok, .motion-ok *),
+    :not(.motion-ok, .motion-ok *)::before,
+    :not(.motion-ok, .motion-ok *)::after {
       animation-delay: -1ms !important;
       animation-duration: 1ms !important;
       animation-iteration-count: 1 !important;

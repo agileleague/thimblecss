@@ -17,9 +17,9 @@
   .overflow-scroll { overflow: scroll }
 
   /* Border radius */
-  .rounded-small { border-radius: var(--radius-small, 4px) }
-  .rounded-medium { border-radius: var(--radius-medium, 8px) }
-  .rounded-large { border-radius: var(--radius-large, 16px) }
+  .rounded-small { border-radius: var(--radius-small) }
+  .rounded-medium { border-radius: var(--radius-medium) }
+  .rounded-large { border-radius: var(--radius-large) }
   .rounded-full { border-radius: 9999px } 
 
   /* Shadow */
@@ -183,7 +183,7 @@
     .xlarge-show { display: none }
   }
 
-  .sr-only {
+  .sr-only:not(:focus, :focus-within) {
     position: absolute;
     inline-size: 1px;
     block-size: 1px;
