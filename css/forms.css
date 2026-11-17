@@ -1,4 +1,4 @@
-@layer thimble.components {
+@layer thimble.elements {
   .input { margin-block-end: 1rem }
 
   :where(

@@ -45,6 +45,7 @@
     --container-large: 60rem;
     --container-xlarge: 71.25rem;
     --container-xxlarge: 82.5rem;
+    --container-padding: var(--space-4);
     --space-1: .25rem;
     --space-2: .5rem;
     --space-3: .75rem;
@@ -102,6 +103,10 @@
     max-inline-size: 100%;
   }
 
+  :where(iframe) {
+    border: 0;
+  }
+
   :where(input, button, textarea, select, optgroup) {
     font: inherit;
     color: inherit;
@@ -111,6 +116,17 @@
 
   :where(button, [type="button"], [type="reset"], [type="submit"]):not(:disabled) {
     cursor: pointer;
+  }
+
+  :where(fieldset) {
+    border: 0;
+    min-inline-size: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  :where(legend) {
+    padding: 0;
   }
 
   :where(:focus-visible) {
@@ -320,6 +336,18 @@
       backdrop-filter: none !important;
     }
   }
+
+  .sr-only:not(:focus, :focus-within) {
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+    block-size: 1px;
+    inline-size: 1px;
+    margin: -1px;
+    padding: 0;
+    position: absolute;
+    overflow: hidden;
+  }
 }
 
 @layer thimble.layout {
@@ -349,6 +377,7 @@
 
   :is(.container-tiny, .container-small, .container-medium, .container-large, .container-xlarge, .container-xxlarge) {
     inline-size: 100%;
+    padding-inline: var(--container-padding);
     margin-inline: auto;
   }
 
@@ -1552,7 +1581,7 @@
   }
 }
 
-@layer thimble.components {
+@layer thimble.elements {
   :where(.button, button, [type="button"], [type="reset"], [type="submit"]) {
     --hover-mixed: color-mix(in oklch, var(--button-background), var(--shade) var(--button-hover-mix));
     --active-mixed: color-mix(in oklch, var(--button-background), var(--shade) var(--button-active-mix));
@@ -1973,6 +2002,14 @@
     aspect-ratio: 1;
   }
 
+  .object-cover {
+    object-fit: cover;
+  }
+
+  .object-contain {
+    object-fit: contain;
+  }
+
   .gap-0 {
     gap: 0;
   }
@@ -2193,6 +2230,10 @@
     margin-inline: auto;
   }
 
+  .ms-auto {
+    margin-inline-start: auto;
+  }
+
   @media (width >= 30em) {
     .small-hide {
       display: none;
@@ -2303,18 +2344,6 @@
     .xlarge-show {
       display: none;
     }
-  }
-
-  .sr-only:not(:focus, :focus-within) {
-    clip-path: inset(50%);
-    white-space: nowrap;
-    border: 0;
-    block-size: 1px;
-    inline-size: 1px;
-    margin: -1px;
-    padding: 0;
-    position: absolute;
-    overflow: hidden;
   }
 }
 

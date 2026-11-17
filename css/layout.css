@@ -12,7 +12,8 @@
   .container-xxlarge { max-inline-size: var(--container-xxlarge) }
   :is(.container-tiny, .container-small, .container-medium, .container-large, .container-xlarge, .container-xxlarge) {
     inline-size: 100%;
-    margin-inline: auto
+    margin-inline: auto;
+    padding-inline: var(--container-padding)
   }
 
   .break-wide {

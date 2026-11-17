@@ -1,4 +1,4 @@
-@layer thimble.components {
+@layer thimble.elements {
   :where(.button, button, [type="button"], [type="reset"], [type="submit"]) {
     --hover-mixed: color-mix(in oklch, var(--button-background), var(--shade) var(--button-hover-mix));
     --active-mixed: color-mix(in oklch, var(--button-background), var(--shade) var(--button-active-mix));

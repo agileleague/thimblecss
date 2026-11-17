@@ -61,6 +61,7 @@
     --container-large: 60rem;     /* 960px */
     --container-xlarge: 71.25rem; /* 1140px */
     --container-xxlarge: 82.5rem; /* 1320px */
+    --container-padding: var(--space-4);
 
     /* Spacing */
     --space-1: 0.25rem;

@@ -7,7 +7,7 @@ This is a major rewrite, the fourth since Thimble's inception. We started with f
 
 ### Structure
 - converted from SCSS to plain CSS with native nesting and custom properties
-- organized into cascade layers: settings, normalize, base, accessibility, layout, components, utilities. Your own unlayered CSS always wins, with no specificity fights
+- organized into cascade layers: settings, normalize, base, accessibility, layout, elements, utilities. Your own unlayered CSS always wins, with no specificity fights
 - utilities no longer use `!important`; layer order does the work
 - optional modules are chosen by editing the imports in `thimble.css` (replaces the `$include-*` options)
 - breakpoints are fixed at 30, 48, 64 and 80em (480, 768, 1024 and 1280px). Sass-configured breakpoints are gone; edit the media queries in `layout-responsive.css` and `utilities.css` to change them

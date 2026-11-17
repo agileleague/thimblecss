@@ -1,5 +1,5 @@
 /*! ThimbleCSS v4.0.0 | MIT */
-@layer thimble.settings, thimble.normalize, thimble.base, thimble.accessibility, thimble.layout, thimble.components, thimble.utilities;
+@layer thimble.settings, thimble.normalize, thimble.base, thimble.accessibility, thimble.layout, thimble.elements, thimble.utilities;
 
 @import url("settings.css");
 @import url("normalize.css");

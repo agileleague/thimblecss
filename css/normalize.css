@@ -10,10 +10,13 @@
   /* Media */
   :where(img, picture, video, canvas) { display: block; max-inline-size: 100%; block-size: auto }
   :where(svg, iframe) { max-inline-size: 100% }
+  :where(iframe) { border: 0 }
 
   /* Forms */
   :where(input, button, textarea, select, optgroup) { font: inherit; color: inherit; letter-spacing: inherit; margin: 0 }
   :where(button, [type="button"], [type="reset"], [type="submit"]):not(:disabled) { cursor: pointer }
+  :where(fieldset) { margin: 0; padding: 0; border: 0; min-inline-size: 0 }
+  :where(legend) { padding: 0 }
   :where(:focus-visible) { outline: var(--focus-ring); outline-offset: var(--focus-ring-offset) }
 
   /* Text wrapping */
