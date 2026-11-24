@@ -7,11 +7,12 @@ This is a major rewrite, the fourth since Thimble's inception. We started with f
 
 ### Structure
 - converted from SCSS to plain CSS with native nesting and custom properties
-- organized into cascade layers: settings, normalize, base, accessibility, layout, elements, utilities. Your own unlayered CSS always wins, with no specificity fights
+- organized into cascade layers under a `thimble` namespace: `thimble.tokens`, `thimble.normalize`, `thimble.base`, `thimble.accessibility`, `thimble.layout`, `thimble.elements`, `thimble.utilities`. Your own unlayered CSS always wins, with no specificity fights
 - utilities no longer use `!important`; layer order does the work
-- optional modules are chosen by editing the imports in `thimble.css` (replaces the `$include-*` options)
+- removed the `$include-*` options; buttons, forms and utilities are always included
 - breakpoints are fixed at 30, 48, 64 and 80em (480, 768, 1024 and 1280px). Sass-configured breakpoints are gone; edit the media queries in `layout-responsive.css` and `utilities.css` to change them
-- the npm package now includes a bundled `dist/thimble.css` and a minified `dist/thimble.min.css`
+- the npm package now includes a bundled `dist/thimble.css` and a minified `dist/thimble.min.css`, built with Lightning CSS (`npm run build`)
+- the package has an `exports` map: `thimblecss` (bundled), `thimblecss/min` (minified) and `thimblecss/css/*` (source files). Other deep imports, including the old `scss/` paths, no longer resolve
 
 ### Normalize and accessibility
 - replaced sanitize with a smaller normalize
@@ -37,15 +38,19 @@ This is a major rewrite, the fourth since Thimble's inception. We started with f
 - `.cols-`, `.span-`, `.order-`, `.row`, `.column`, `.fit` and `.fill` have `small-`, `medium-`, `large-` and `xlarge-` versions
 - gutters are `gap`, set with `--gap`
 - alignment classes are `.align-*`, `.justify-*` and `.self-*`; `.align-*` no longer sets `align-self`
+- added `.justify-evenly`
 - `.align-wide` and `.align-full` are renamed `.break-wide` and `.break-full`
-- added `.container-tiny`; container widths are now in rem
+- added `.container-tiny`; container widths are now in rem, and containers get side padding from `--container-padding`
 - removed `.cell`, `.edge`, `.half-edge`, `.collapse`, `.collapse-padding`, `.fifth`, the word sizes (`.one` to `.twelve`), `.vertical`, `.reverse`, `.nowrap` and `.wrap-reverse`
 
 ### Buttons and forms
 - hover and active colors are computed at runtime with `color-mix()`, so the color tints are no longer needed
 - buttons: added a disabled state and `.plain` for unstyled buttons. `:focus-visible` replaces `:focus`, and the primary hover no longer turns gray
+- buttons: all buttons have a 2px transparent border so `.ghost` buttons match their size; padding adjusted to match
 - forms: styles apply only to text-like fields, select and textarea; plain labels are blocks, and checkbox and radio labels use flex
 - added `:user-invalid` and `aria-invalid` styling, placeholder color, and `textarea.autogrow`
+- selects drop the native appearance and get a custom arrow and a not-allowed cursor when disabled
+- disabled fields use colors derived from `--form-border`, and labels wrapping a disabled control are dimmed with a not-allowed cursor
 - checked radios stay visible in Windows High Contrast mode
 - submit buttons are no longer full width; add `.full`
 
@@ -55,13 +60,15 @@ This is a major rewrite, the fourth since Thimble's inception. We started with f
 - `.rounded-full` uses 9999px, so non-square elements become pills instead of ovals
 - `.clear` is now `display: flow-root`
 - added `.text-muted`
-- added spacing: gap, padding, margin-top, margin-bottom and `.mx-auto`, on a `--space-1` to `--space-8` scale
+- added spacing: gap, padding, margin-top, margin-bottom, `.mx-auto` and `.ms-auto`, on a `--space-1` to `--space-8` scale
 - per-breakpoint hide, show and text-align classes are kept
 
 ### Tokens and colors
 - removed the `-l1`, `-l2`, `-d1` and `-d2` color tints and the `--mix-*` values
 - links, the focus ring and buttons use lighter blues in dark mode for contrast
-- added shadow, spacing, radius, leading and `--mono-font` tokens
+- added spacing (`--space-*`), leading (`--leading-*`) and type scale (`--type-*`) tokens
+- added `--heading-font`, `--mono-font`, `--shade`, `--gap`, `--grid-min` and `--container-padding`
+- added `--focus-ring`, `--focus-ring-color`, `--focus-ring-offset` and `--form-invalid-border`
 - renamed `--header-color` to `--heading-color`
 - removed `--subfont-color` (use `--muted-color`), `--cell-margin` and `--cell-padding`
 - replaced `--easing` and the `--*-speed` tokens with `--duration` and `--ease`
@@ -69,9 +76,10 @@ This is a major rewrite, the fourth since Thimble's inception. We started with f
 - removed the Sass mixins (`scrollbar`, `columns`, `quick-center`)
 
 ### Migrating from v3
+- replace the Sass import (`scss/_thimble.scss`) with `@import "thimblecss"` or a link to `dist/thimble.css`
 - `.grid` with `.cell.six` becomes `.grid.cols-12` with `.span-6`. To stack on small screens, use `.grid.medium-cols-12` with `.medium-span-6`
 - `.cell.fill` and `.cell.fit` in a row become `.flex` with `.fill` and `.fit`; add `.wrap` if the row should wrap
-- `.vertical` becomes `.flex.column`
+- `.vertical` becomes `.flex.column`, and `.reverse` becomes `.flex.row-reverse`
 - the old `.flex` utility now adds a gap; add `.gap-0` where you need the old behavior
 - `.justify-space` becomes `.justify-between`, `.align-top` becomes `.align-start`, and `.align-bottom` becomes `.align-end`
 - `.align-wide` and `.align-full` become `.break-wide` and `.break-full`
