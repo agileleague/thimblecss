@@ -1,5 +1,5 @@
 /*! ThimbleCSS v4.0.0 | MIT */
-@layer thimble.settings {
+@layer thimble.tokens {
   :root {
     color-scheme: light dark;
     --green: #6f8d6a;
@@ -19,7 +19,7 @@
     --mono-font: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     --heading-color: light-dark(var(--jet), white);
     --font-color: light-dark(var(--jet), #fffc);
-    --muted-color: color-mix(in oklch, var(--font-color), transparent 25%);
+    --muted-color: color-mix(in oklch, var(--font-color), transparent 50%);
     --link-color: light-dark(var(--blue), color-mix(in oklch, var(--blue), white 46%));
     --link-hover: color-mix(in oklch, var(--link-color), var(--shade) 25%);
     --type-neg-1: clamp(.8rem, .785rem + .08vw, .84rem);
@@ -59,9 +59,6 @@
     --radius-small: 4px;
     --radius-medium: 8px;
     --radius-large: 16px;
-    --focus-ring-color: var(--link-color);
-    --focus-ring: 2px solid var(--focus-ring-color);
-    --focus-ring-offset: 2px;
     --shade: light-dark(#000, #fff);
     --button-radius: var(--radius-medium);
     --button-text-color: light-dark(var(--white), var(--black));
@@ -69,6 +66,9 @@
     --button-background-secondary: color-mix(in oklch, var(--gray), var(--shade) 15%);
     --button-hover-mix: 10%;
     --button-active-mix: 20%;
+    --focus-ring-color: var(--link-color);
+    --focus-ring: 2px solid color-mix(in oklch, var(--focus-ring-color), transparent 50%);
+    --focus-ring-offset: 2px;
     --form-radius: var(--radius-small);
     --form-background: transparent;
     --form-border: var(--gray);
@@ -1671,6 +1671,20 @@
     &:disabled {
       background-color: color-mix(in oklch, var(--form-border), transparent 85%);
       border-color: color-mix(in oklch, var(--form-border), transparent 60%);
+      cursor: not-allowed;
+    }
+  }
+
+  :where(select:not([multiple], [size])) {
+    appearance: none;
+    cursor: pointer;
+    background-image: linear-gradient(45deg, #0000 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, #0000 50%);
+    background-position: calc(100% - 1.4rem), calc(100% - 1rem);
+    background-repeat: no-repeat;
+    background-size: .4rem .4rem;
+    padding-inline-end: 2.75rem;
+
+    &:disabled {
       cursor: not-allowed;
     }
   }
