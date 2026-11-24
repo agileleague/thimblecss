@@ -1,7 +1,7 @@
 /*! ThimbleCSS v4.0.0 | MIT */
-@layer thimble.settings, thimble.normalize, thimble.base, thimble.accessibility, thimble.layout, thimble.elements, thimble.utilities;
+@layer thimble.tokens, thimble.normalize, thimble.base, thimble.accessibility, thimble.layout, thimble.elements, thimble.utilities;
 
-@import url("settings.css");
+@import url("tokens.css");
 @import url("normalize.css");
 @import url("base.css");
 @import url("accessibility.css");

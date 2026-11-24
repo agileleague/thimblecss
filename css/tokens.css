@@ -1,4 +1,4 @@
-@layer thimble.settings {
+@layer thimble.tokens {
   :root {
     /* Base Colors */
     color-scheme: light dark;
